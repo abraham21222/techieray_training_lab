@@ -87,7 +87,7 @@ class CodexDockerNeutralAgent(BaseAgent):
                 env_vars[k] = os.environ[k]
 
         cmd = (
-            "cd /workspace && "
+            "if [ -d /workspace ]; then cd /workspace; fi && "
             f"/opt/codex/bin/codex exec --model {model} "
             "--dangerously-bypass-approvals-and-sandbox "
             "--skip-git-repo-check "
@@ -139,13 +139,13 @@ class CodexDockerNeutralAgent(BaseAgent):
             context.n_input_tokens = in_tok
             context.n_output_tokens = out_tok
 
-        # Fallback: if agent printed fenced JSON but didn't write /workspace/answer.json
+        # Fallback: if agent printed fenced JSON but didn't write /workspace/answer.json (only for task containers)
         if not ans_raw.strip():
             extracted = _extract_json_from_text(last_msg)
             if extracted:
                 b64 = base64.b64encode(json.dumps(extracted, indent=2).encode("utf-8")).decode("ascii")
                 await environment.exec(
-                    f"python3 -c \"import base64; open('/workspace/answer.json','wb').write(base64.b64decode('{b64}'))\""
+                    f"if [ -d /workspace ]; then python3 -c \"import base64; open('/workspace/answer.json','wb').write(base64.b64decode('{b64}'))\"; fi"
                 )
                 ans_raw = json.dumps(extracted, indent=2)
 
