@@ -71,21 +71,30 @@ We selected a **10-task stratified subset (`harbor/subset10/`)** covering all di
    - **Takeaway:** Right now, 45 of 50 tasks (single-URL lookup) are close to saturated for frontier models with search + fetch, while the **5 of 50 negative-existence traps** are doing almost all the real discriminative work. Scaling trap ratio from `10%` → `25%–35%` (including subtler traps: draft/withdrawn bills, superseded guidance, wrong year/amendment) would immediately sharpen the benchmark's frontier signal.
 2. **Non-English regulatory discovery works cleanly even on a zero-key search engine** — `gpt-6.1-sol` solved Argentina's `Boletín Oficial` (`3/3 = 1.000`) in 3 shell calls strictly inside Docker.
 
-### 3 Verified Deterministic URL-Matcher Bugs (Causing ~24% False Negatives in Pure-Deterministic RL)
-In our 30 Docker trials (plus 10 Neon trials), **every single `unlisted` false negative on a valid official source** came from `accepted_url_fragments` being too narrow for deterministic RL grading (without paying for the LLM grader):
+### 3 Verified Deterministic URL-Matcher Bugs + 1 Prompt/Strict-Mode Spec Gap (Confirmed by `harbor analyze`)
+We ran Harbor's built-in **`harbor analyze`** across all **17 non-1.0 trials** from our `3 × 10` Docker run (`rubrics/fairness_rubric.toml` — grading `reward_hacking`, `task_specification`, and `grader_fairness`; full JSON saved at `harbor/results/harbor_analyze_fairness_3x10.json`):
+- **`reward_hacking`: `17/17` PASS** (`0` hacks).
+- **`task_specification`: `11/17` PASS, `6/17` FAIL** | **`grader_fairness`: `10/17` PASS, `7/17` FAIL**.
+- Every true agent failure (all 3 South Africa trap failures, 2 Argentina trap failures, and 2 Brazil wrong-bill drifts) passed fairness cleanly (`SPEC=pass, FAIR=pass`), while `harbor analyze` independently confirmed **4 concrete fairness/spec bugs**:
 
-1. **California Legislature (`3c4534e4800c` — AB 723):**
+1. **California Legislature (`3c4534e4800c` — AB 723) — `2/2` failing runs flagged (`SPEC=fail, FAIR=fail`):**
    - Gold fragment: `leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB723`
    - Submitted (Neon + Sol 2/3 runs): `leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB723`
    - **Fix:** Normalize `leginfo.legislature.ca.gov` bill URLs by `bill_id=` across `billNavClient.xhtml`, `billTextClient.xhtml`, `billVersionsClient.xhtml`, and `billStatusClient.xhtml`.
-2. **Indiana General Assembly (`741577743871` — HB 1047):**
+2. **Indiana General Assembly (`741577743871` — HB 1047) — `2/3` runs flagged (`SPEC=fail, FAIR=fail`):**
    - Gold fragment: `iga.in.gov/legislative/2024/bills/house/1047/details`
    - Submitted (Sol 2/3 runs): `https://iga.in.gov/pdf-documents/123/2024/house/bills/HB1047/HB1047.06.ENRS.pdf` (literally the official Enrolled Act PDF on `iga.in.gov`!)
    - **Fix:** Accept both the bill details page and `iga.in.gov/pdf-documents/.../HB1047/...` enrolled/bill PDFs on `iga.in.gov`.
-3. **Brazil Câmara dos Deputados (`3979ac328815` — PL 6237/2025):**
+3. **Brazil Câmara dos Deputados (`3979ac328815` — PL 6237/2025) — `1/3` run flagged (`SPEC=fail, FAIR=fail`):**
    - Gold fragment: `camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3063060&filename=PL%206237/2025`
    - Submitted: Neon gave `prop_mostrarintegra?codteor=3063060` (missing cosmetic `&filename=`); Sol gave `prop_mostrarintegra?codteor=3104780&filename=Avulso+PL...` (updated official `Avulso` revision PDF).
    - **Fix:** Strip cosmetic `&filename=` query params in `common/matching.py` and accept the Câmara ficha page (`fichadetramitacao?idProposicao=...`) + official `Avulso` PDFs of the same bill.
+4. **Silent `strict` Mode vs. `task_prompt.txt` Spec Mismatch (`741577743871` Run 3 — newly caught by `harbor analyze`!):**
+   - `task_prompt.txt` explicitly tells every agent that *"the instrument itself, or that body's own announcement of it (...or a government portal's own report of the decision also count)"* — without ever telling the agent which items are marked `strict` (`authoritative_url_fragments` only, where announcements and government portal reports score `0.0`).
+   - In Run 3 of `741577743871`, Sol submitted an official Indiana Office of Court Services legislative update (`legislativeupdate.courts.in.gov`) summarizing H.E.A. 1047 (`P.L. 79`), which scored `0.0` (`not_authoritative`).
+   - **Fix:** Tell the agent explicitly on `strict` items (*"Return the authoritative statutory/regulatory text itself; announcements or portal summaries do not count"*), or accept official government-portal reports as the prompt currently promises.
+
+*(Note: the 7th `grader_fairness` fail caught by `harbor analyze` was our initial `-site:techieray.com` exclusion false positive on `55488895e866` Run 1 — now fixed in `harbor/tools/websearch`.)*
 
 ### 3 Additional Practical Findings
 1. **Pretraining Memorization Check:** During an early smoke test where shell execution failed (`0` tool calls), `gpt-6.1-sol` still produced the exact California AB 723 URL (`billNavClient.xhtml?bill_id=202520260AB723`, `+0.90`) from memory alone. Weighting newer post-cutoff instruments (and pairing retrieval with fresh document analysis) prevents pure-memorization inflation.
