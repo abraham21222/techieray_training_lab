@@ -1,0 +1,6 @@
+{"example_id": "find_primary_source-19872e77eb80", "rollout_id": 1, "url": "https://www.canada.ca/en/innovation-science-economic-development/news/2025/12/canada-advances-international-cooperation-on-industry-ai-and-digital-technology-at-the-g7-industry-digital-and-technology-ministers-meeting.html", "no_official_source": false, "confidence": "verified"}
+{"example_id": "find_primary_source-19872e77eb80", "rollout_id": 2, "url": "https://www.example-news.com/story/123", "no_official_source": false, "confidence": "verified"}
+{"example_id": "find_primary_source-19872e77eb80", "rollout_id": 3, "url": null, "no_official_source": true, "confidence": "likely"}
+{"example_id": "find_primary_source-3979ac328815", "rollout_id": 1, "url": "https://camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3063060&filename=PL%206237/2025", "no_official_source": false, "confidence": "verified"}
+{"example_id": "find_primary_source-55488895e866", "rollout_id": 1, "url": null, "no_official_source": true, "confidence": "verified"}
+{"example_id": "find_primary_source-55488895e866", "rollout_id": 2, "url": "https://www.gov.za/documents/example", "no_official_source": false, "confidence": "verified"}

@@ -1,0 +1,114 @@
+{
+  "strategies": {
+    "answer_site_homepage": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_site_homepage_verified": {
+      "mean_reward": -0.25,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_site_homepage_english": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "ten_urls_in_one_string": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "ten_urls_comma_separated": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "ten_urls_as_a_list": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "always_no_source": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_and_no_source": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_inside_another_query": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_inside_query_no_scheme": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "answer_as_path_on_another_site": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "tracker_page": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "empty_answer": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "announcement_not_text": {
+      "mean_reward": 0.0,
+      "items_rewarded": 0,
+      "examples": [],
+      "ok": true
+    },
+    "right_answer_always_likely": {
+      "mean_reward": 0.9,
+      "items_rewarded": 45,
+      "examples": [
+        "find_primary_source-19872e77eb80",
+        "find_primary_source-1c544f783673",
+        "find_primary_source-291bfe01383e",
+        "find_primary_source-3979ac328815",
+        "find_primary_source-3c4534e4800c"
+      ],
+      "ok": true
+    },
+    "honest": {
+      "mean_reward": 1.0,
+      "items_rewarded": 45,
+      "examples": [
+        "find_primary_source-19872e77eb80",
+        "find_primary_source-1c544f783673",
+        "find_primary_source-291bfe01383e",
+        "find_primary_source-3979ac328815",
+        "find_primary_source-3c4534e4800c"
+      ],
+      "ok": true
+    }
+  },
+  "no_source_share": 0.1,
+  "items": 50
+}
