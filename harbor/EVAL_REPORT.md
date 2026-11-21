@@ -2,7 +2,36 @@
 
 **Date:** November 21, 2026  
 **Upstream Repo:** [`techie-ray/techieray_training_lab`](https://github.com/techie-ray/techieray_training_lab) (50-task preview)  
-**What This Branch Adds:** Complete **Harbor 0.24.0 (`schema_version = "1.3"`)** container packaging of all 50 tasks, neutral containerized `websearch` + `webfetch` tools for fair cross-model evaluation (`terminus-2` / containerized CLI agents), tool- and verifier-layer anti-leak guards, and empirical multi-trial Docker baselines.
+**What This Branch Adds:** Complete **Harbor 0.24.0 (`schema_version = "1.3"`)** container packaging of all 50 tasks, neutral containerized `websearch` + `webfetch` tools for fair cross-model evaluation (`terminus-2` / containerized CLI agents), tool- and verifier-layer anti-leak guards, empirical `3 × 10` Docker baselines, and an automated `harbor analyze` fairness audit.
+
+---
+
+## 0. Plain-English "Aircraft Manual" (Step-by-Step Walkthrough of Everything We Did)
+
+If you want to understand (or reproduce) the whole project in 2 minutes with zero jargon:
+
+1. **Step 1 — Understand what Techie Ray's task actually tests:**
+   - You give an AI a 1-sentence news alert (e.g., *"Indiana enacts bill criminalizing AI deepfake intimate images"* + date + jurisdiction).
+   - The AI has to search the web and return a 3-field JSON object with the **official government primary-source URL** (not news, not a law-firm blog) — OR recognize when **no official source exists** (5 of the 50 tasks are deliberate "wrong-jurisdiction" traps).
+2. **Step 2 — Put all 50 tasks into Harbor Docker containers (`harbor/tasks/`):**
+   - Each of the 50 tasks now lives in its own isolated Harbor 1.3 folder (`task.toml`, `instruction.md`, `solution/solve.sh`, `tests/verify.py`, `tests/item.json`) running Techie Ray's exact upstream reward function unchanged.
+   - We sanity-checked the containers with Harbor's `oracle` (**10/10 = `1.000`**) and `nop` (**10/10 = `0.000`**).
+3. **Step 3 — Fix the uneven tool playing field inside Docker (`websearch` + `webfetch`):**
+   - In Techie Ray's original runner, Claude got search + page fetch, while Codex only got search snippets (zero page fetches). Comparing models on different tools isn't fair.
+   - We built two neutral command-line tools directly into the shared Docker image (`Dockerfile.base`): `websearch` (supports `SERPER_API_KEY`, `BRAVE_API_KEY`, `TAVILY_API_KEY`, or zero-key DuckDuckGo fallback) and `webfetch` (browser-TLS HTML + PDF reader so Akamai/Cloudflare government sites like `canada.ca` don't block it). Both tools + `verify.py` block `techieray.com` to prevent answer leakage.
+4. **Step 4 — Run 30 real inside-Docker trials (`3 × 10` stratified tasks):**
+   - We ran `gpt-6.1-sol` **strictly inside Docker** with OpenAI's built-in search turned **OFF**, forcing it to use **only** our container's neutral `websearch` and `webfetch` tools across 10 diverse tasks × 3 attempts each (`30` trials, `0` crashes).
+   - **Result:** Raw mean **`0.490`**, but audited true accuracy was **`87.5%` (`21/24`) on real official sources** and **`0.0%` (`0/6`) on the 2 fabricated traps** (4 hallucination penalties of `-0.25`).
+5. **Step 5 — Run Harbor's built-in fairness auditor (`harbor analyze`) on all 17 non-1.0 trials:**
+   - Every single trial scoring `< 1.0` was audited inside Docker against 3 checks: `reward_hacking` (17/17 PASS), `task_specification` (11/17 PASS, 6/17 FAIL), and `grader_fairness` (10/17 PASS, 7/17 FAIL).
+   - We then manually reviewed every single one of those 7 flags to separate **true grader bugs** (5/7) from **our own tool bug** (1/7, fixed) and **over-literal auditing** (1/7, see Section 4.1 below).
+6. **Step 6 — Reproduce in 3 commands:**
+   ```bash
+   cd harbor
+   docker build -t techieray-harbor-base:latest -f Dockerfile.base .
+   ./scripts/verify_packaging.sh
+   harbor run -p subset10 -a terminus-2 -m openai/gpt-5.2 --ae SERPER_API_KEY="$SERPER_API_KEY" -k 3 -n 5
+   ```
 
 ---
 
@@ -95,6 +124,20 @@ We ran Harbor's built-in **`harbor analyze`** across all **17 non-1.0 trials** f
    - **Fix:** Tell the agent explicitly on `strict` items (*"Return the authoritative statutory/regulatory text itself; announcements or portal summaries do not count"*), or accept official government-portal reports as the prompt currently promises.
 
 *(Note: the 7th `grader_fairness` fail caught by `harbor analyze` was our initial `-site:techieray.com` exclusion false positive on `55488895e866` Run 1 — now fixed in `harbor/tools/websearch`.)*
+
+### 4.1 Our Honest Verdict on `harbor analyze`: Where We Agree vs. Where We Push Back
+Automated fairness auditors are super helpful for surfacing bugs quickly, **but they are not infallible**—sometimes they demand overly spoon-fed instructions where a real-world benchmark *should* expect professional judgment. Here is our plain-English call on all **7** flags:
+
+- **5 / 7 flags — 100% AGREE (Real Grader Bugs — Fix in `common/matching.py` / `item.json`):**
+  - California `billTextClient.xhtml` vs `billNavClient.xhtml` (2 runs), Indiana Enrolled Act PDF vs HTML details page (2 runs), and Brazil newer `Avulso` PDF (1 run).
+  - *Why:* You should **never** "fix" these by telling the agent which tab to click in the prompt. The prompt is fine—the deterministic URL matcher just needs normalizers for state and foreign bills (just like Techie Ray already built for `congress.gov`, `federalregister.gov`, `admin.ch`, and `EUR-Lex`).
+- **1 / 7 flag — 100% AGREE (Our Own Harness Bug — Already Fixed):**
+  - Argentina trap Run 1 (`55488895e866`): the agent tried to *follow* the rule by searching `-site:techieray.com`, and our first regex flagged it as a leak. Fixed in `harbor/tools/websearch`.
+- **1 / 7 flag — PARTIAL PUSHBACK (`741577743871` Run 3 — Indiana `legislativeupdate.courts.in.gov`):**
+  - `harbor analyze` failed this trial on both `task_specification` and `grader_fairness` because `task_prompt.txt` says *"a government portal's own report of the decision also count"*, yet the item is silently marked `strict`.
+  - *Our pushback:* You do **not** need to hand-hold the agent with a `strict: true` label! In real legal practice, when an enacted statute (`HB 1047`) is publicly posted on the legislature's own website (`iga.in.gov`), citing a court-staff summary newsletter (`legislativeupdate.courts.in.gov`) instead of the statute *should* lose credit.
+  - *The clean 1-sentence fix (keeps the task realistic and hard):* Instead of saying *"the instrument itself, OR an announcement / government portal report also count"* as if they are equal, state the real-world lawyer priority rule in `task_prompt.txt`:  
+    > *"Always return the primary instrument itself (statute, bill text, decree, regulation, or official gazette) whenever it is publicly posted. Only fall back to an issuing body's official announcement or government-portal report if the primary text itself is not published online."*
 
 ### 3 Additional Practical Findings
 1. **Pretraining Memorization Check:** During an early smoke test where shell execution failed (`0` tool calls), `gpt-6.1-sol` still produced the exact California AB 723 URL (`billNavClient.xhtml?bill_id=202520260AB723`, `+0.90`) from memory alone. Weighting newer post-cutoff instruments (and pairing retrieval with fresh document analysis) prevents pure-memorization inflation.
