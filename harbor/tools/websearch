@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+"""Neutral, model-agnostic web search CLI for containerized Harbor benchmarks.
+
+Provider priority (--provider auto, or WEBSEARCH_PROVIDER env var):
+  1. serper  (SERPER_API_KEY)  -> Google SERP JSON (most common benchmark standard)
+  2. brave   (BRAVE_API_KEY)   -> Independent Brave Search API
+  3. tavily  (TAVILY_API_KEY)  -> Tavily Search API
+  4. ddg     (no API key)      -> Zero-key DuckDuckGo fallback (ddgs / HTML endpoint)
+
+Enforces domain blocklist (techieray.com) at the tool layer so agents cannot
+leak gold answers from the benchmark author's tracker.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import pathlib
+import re
+import sys
+import urllib.parse
+import urllib.request
+from typing import Any
+
+BLOCKED_RE = re.compile(r"(?<![a-z0-9-])(?:[a-z0-9-]+\.)*techieray\.com(?![a-z0-9-])", re.I)
+NEGATED_BLOCKED_RE = re.compile(r"(?:^|\s)-site:(?:[a-z0-9-]+\.)*techieray\.com(?=\s|$)", re.I)
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+
+
+def _mark_blocked(reason: str) -> None:
+    try:
+        p = pathlib.Path("/workspace/.blocked_domain_seen")
+        if p.parent.exists():
+            p.write_text(reason + "\n")
+    except Exception:
+        pass
+
+
+def _is_blocked(text: str) -> bool:
+    return bool(BLOCKED_RE.search(text or ""))
+
+
+def _http_json(url: str, *, method: str = "GET", headers: dict[str, str] | None = None, body: dict | None = None, timeout: int = 20) -> Any:
+    hdrs = {"User-Agent": UA, "Accept": "application/json"}
+    if headers:
+        hdrs.update(headers)
+    data = None
+    if body is not None:
+        data = json.dumps(body).encode("utf-8")
+        hdrs["Content-Type"] = "application/json"
+    req = urllib.request.Request(url, data=data, headers=hdrs, method=method)
+    with urllib.request.urlopen(req, timeout=timeout) as resp:
+        return json.loads(resp.read().decode("utf-8", errors="replace"))
+
+
+def _search_serper(query: str, max_results: int) -> list[dict[str, Any]]:
+    key = os.environ["SERPER_API_KEY"]
+    data = _http_json(
+        "https://google.serper.dev/search",
+        method="POST",
+        headers={"X-API-KEY": key},
+        body={"q": query, "num": max_results},
+    )
+    out = []
+    for item in data.get("organic", []):
+        out.append({
+            "title": item.get("title", ""),
+            "url": item.get("link", ""),
+            "snippet": item.get("snippet", ""),
+        })
+    return out
+
+
+def _search_brave(query: str, max_results: int) -> list[dict[str, Any]]:
+    key = os.environ["BRAVE_API_KEY"]
+    qs = urllib.parse.urlencode({"q": query, "count": min(max_results, 20)})
+    data = _http_json(
+        f"https://api.search.brave.com/res/v1/web/search?{qs}",
+        headers={"X-Subscription-Token": key},
+    )
+    out = []
+    for item in data.get("web", {}).get("results", []):
+        out.append({
+            "title": item.get("title", ""),
+            "url": item.get("url", ""),
+            "snippet": item.get("description", ""),
+        })
+    return out
+
+
+def _search_tavily(query: str, max_results: int) -> list[dict[str, Any]]:
+    key = os.environ["TAVILY_API_KEY"]
+    data = _http_json(
+        "https://api.tavily.com/search",
+        method="POST",
+        body={
+            "api_key": key,
+            "query": query,
+            "max_results": max_results,
+            "search_depth": "basic",
+        },
+    )
+    out = []
+    for item in data.get("results", []):
+        out.append({
+            "title": item.get("title", ""),
+            "url": item.get("url", ""),
+            "snippet": item.get("content", ""),
+        })
+    return out
+
+
+def _unwrap_ddg_url(href: str) -> str:
+    if not href:
+        return ""
+    if href.startswith("//"):
+        href = "https:" + href
+    parsed = urllib.parse.urlparse(href)
+    if "duckduckgo.com" in parsed.netloc and parsed.path.startswith("/l/"):
+        qs = urllib.parse.parse_qs(parsed.query)
+        if "uddg" in qs and qs["uddg"]:
+            return qs["uddg"][0]
+    return href
+
+
+def _search_ddg(query: str, max_results: int) -> list[dict[str, Any]]:
+    # 1. Try ddgs library (meta-search across public web engines, zero API key)
+    try:
+        from ddgs import DDGS  # type: ignore
+
+        raw_rows = DDGS().text(query, max_results=max_results) or []
+        rows = []
+        for r in raw_rows:
+            rows.append({
+                "title": r.get("title", ""),
+                "url": r.get("href", "") or r.get("url", ""),
+                "snippet": r.get("body", "") or r.get("snippet", ""),
+            })
+        if rows:
+            return rows
+    except Exception:
+        pass
+
+    # 2. Browser-TLS DuckDuckGo HTML fallback (via primp, then urllib)
+    from bs4 import BeautifulSoup  # type: ignore
+
+    html = ""
+    try:
+        import primp  # type: ignore
+
+        resp = primp.Client(impersonate="random", timeout=20, follow_redirects=True).post(
+            "https://html.duckduckgo.com/html/",
+            data={"q": query},
+        )
+        if resp.status_code == 200:
+            html = resp.text
+    except Exception:
+        pass
+    if not html:
+        body = urllib.parse.urlencode({"q": query}).encode("utf-8")
+        req = urllib.request.Request(
+            "https://html.duckduckgo.com/html/",
+            data=body,
+            headers={
+                "User-Agent": UA,
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept-Language": "en-US,en;q=0.9",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+    soup = BeautifulSoup(html, "html.parser")
+    out = []
+    for div in soup.select("div.result"):
+        a = div.select_one("a.result__a")
+        if not a:
+            continue
+        url = _unwrap_ddg_url(a.get("href", ""))
+        title = a.get_text(" ", strip=True)
+        snip_el = div.select_one(".result__snippet")
+        snippet = snip_el.get_text(" ", strip=True) if snip_el else ""
+        if url.startswith("http"):
+            out.append({"title": title, "url": url, "snippet": snippet})
+        if len(out) >= max_results:
+            break
+    return out
+
+
+def _resolve_provider(requested: str) -> str:
+    pref = (requested or os.environ.get("WEBSEARCH_PROVIDER") or "auto").strip().lower()
+    if pref != "auto":
+        return pref
+    if os.environ.get("SERPER_API_KEY"):
+        return "serper"
+    if os.environ.get("BRAVE_API_KEY"):
+        return "brave"
+    if os.environ.get("TAVILY_API_KEY"):
+        return "tavily"
+    return "ddg"
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Neutral web search CLI for Harbor tasks.")
+    ap.add_argument("query", nargs="+", help="Search query string")
+    ap.add_argument("--max", "-n", type=int, default=10, help="Max results (default: 10)")
+    ap.add_argument(
+        "--provider",
+        choices=["auto", "serper", "brave", "tavily", "ddg"],
+        default="auto",
+        help="Search backend (default: auto via env keys, falling back to ddg)",
+    )
+    ap.add_argument("--text", action="store_true", help="Compact plain-text output instead of JSON")
+    args = ap.parse_args()
+
+    query = " ".join(args.query).strip()
+    if not query:
+        print(json.dumps({"error": "empty query"}), file=sys.stderr)
+        return 1
+
+    # Strip polite negative exclusions like "-site:techieray.com" (results are already filtered)
+    query = NEGATED_BLOCKED_RE.sub(" ", query).strip()
+    if _is_blocked(query):
+        _mark_blocked(f"websearch query blocked: {query}")
+        print(json.dumps({"error": "blocked_domain", "detail": "Searching techieray.com is prohibited."}), file=sys.stderr)
+        return 2
+
+    provider = _resolve_provider(args.provider)
+    try:
+        if provider == "serper":
+            raw = _search_serper(query, args.max)
+        elif provider == "brave":
+            raw = _search_brave(query, args.max)
+        elif provider == "tavily":
+            raw = _search_tavily(query, args.max)
+        else:
+            raw = _search_ddg(query, args.max)
+    except Exception as exc:
+        print(json.dumps({"provider": provider, "query": query, "error": str(exc), "results": []}))
+        return 1
+
+    filtered = []
+    for item in raw:
+        url = (item.get("url") or "").strip()
+        if not url or _is_blocked(url):
+            continue
+        filtered.append({
+            "rank": len(filtered) + 1,
+            "title": (item.get("title") or "").strip(),
+            "url": url,
+            "snippet": (item.get("snippet") or "").strip(),
+        })
+        if len(filtered) >= args.max:
+            break
+
+    if args.text:
+        print(f"# provider={provider} query={query!r} results={len(filtered)}")
+        for r in filtered:
+            print(f"[{r['rank']}] {r['title']}\n    {r['url']}\n    {r['snippet']}")
+    else:
+        print(json.dumps({"provider": provider, "query": query, "results": filtered}, ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

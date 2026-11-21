@@ -1,0 +1,33 @@
+{
+  "as_of_date": "2025-01-01",
+  "example_id": "find_primary_source-8c00b54b0d5e",
+  "input": {
+    "article_url": null,
+    "headline": "Kansas law takes effect voiding contract clauses that allow digital replicas of a performer's voice or likeness without specific use descriptions or legal or union representation.",
+    "jurisdictions": [
+      "US-KS"
+    ],
+    "published": "2025-01-01"
+  },
+  "input_full": null,
+  "input_named": null,
+  "reference": {
+    "accepted_url_fragments": [],
+    "canonical_url": null,
+    "no_official_source": true
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "US-KS",
+    "legal_domain": "online_safety",
+    "legal_domains": [
+      "online_safety",
+      "human_rights",
+      "employment"
+    ],
+    "question_form": "counterfactual_alert",
+    "region": "North America",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

@@ -1,0 +1,61 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-90fc73701544",
+  "input": {
+    "article_url": null,
+    "headline": "Brazil: AI bill introduced in lower house grants rights to explanation, contestation, human review, non-discrimination, and disclosure of automated decision-making.",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "A Bill on Artificial Intelligence (PL 1465/2024) was introduced to the Brazilian Chamber of Deputies. The Act outlines several rights for individuals that are directly or indirectly affected by AI systems, including the right to information, the right to explanation, the right to contestation, the right to human determination and participation, and the principle of non-discrimination and bias correction. The bill also sets out pre-contractual information rights, such as automated decision-making disclosure, requiring informing data subjects about the automated nature of decisions in processes or products that affect them.",
+    "headline": "Bill No. 1465/2024",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Bill No. 1465/2024",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "camara.leg.br/propostas-legislativas/2430325"
+    ],
+    "authoritative_hosts": [
+      "camara.leg.br",
+      "gov.br",
+      "planalto.gov.br",
+      "senado.leg.br"
+    ],
+    "authoritative_url_fragments": [
+      "camara.leg.br/propostas-legislativas/2430325"
+    ],
+    "canonical_url": "https://camara.leg.br/propostas-legislativas/2430325",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "BR",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "human_rights",
+      "criminal_justice"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "pt",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

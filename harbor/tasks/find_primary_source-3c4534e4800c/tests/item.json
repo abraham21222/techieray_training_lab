@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2026-01-01",
+  "example_id": "find_primary_source-3c4534e4800c",
+  "input": {
+    "article_url": null,
+    "headline": "California law takes effect requiring real estate agents to disclose digitally or AI-altered listing images and link to the original unaltered photos, enforced via licensing discipline.",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2026-01-01"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "An act to require disclosure of digitally altered real-estate images. It requires real estate brokers, salespersons, and persons acting on their behalf who include a digitally altered image (including AI-altered images) in advertising or promotional material for the sale of real property to disclose that the image has been altered and to provide a link, URL, or QR code to a publicly accessible copy of the original, unaltered image. It is enforced through disciplinary action under the California Real Estate Regulations, including potential license suspension or revocation.",
+    "headline": "Real Estate Digitally Altered Images Disclosures (AB 723)",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2026-01-01"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Real Estate Digitally Altered Images Disclosures (AB 723)",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2026-01-01"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB723"
+    ],
+    "authoritative_hosts": [
+      "calcivilrights.ca.gov",
+      "cppa.ca.gov",
+      "gov.ca.gov",
+      "leginfo.legislature.ca.gov"
+    ],
+    "authoritative_url_fragments": [
+      "leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB723"
+    ],
+    "canonical_url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB723",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "US-CA",
+    "legal_domain": "consumer",
+    "legal_domains": [
+      "consumer",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

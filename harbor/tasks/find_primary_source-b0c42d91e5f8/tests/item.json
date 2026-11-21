@@ -1,0 +1,57 @@
+{
+  "as_of_date": "2024-10-15",
+  "example_id": "find_primary_source-b0c42d91e5f8",
+  "input": {
+    "article_url": null,
+    "headline": "A UN cultural agency and an international economic body, with input from leading industrial nations, release a toolkit helping governments turn trustworthy AI principles into public-sector policies.",
+    "jurisdictions": [
+      "G7",
+      "OECD"
+    ],
+    "published": "2024-10-15"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The United Nations Educational, Scientific and Cultural Organization (UNESCO) and the OECD, with contributions from the G7, have developed a toolkit for policymakers and public sector leaders to translate principles for safe, secure, and trustworthy AI into actionable policies. The key messages of the toolkit are to: (1) establish clear strategic objectives and action plans in line with expected benefits; (2) include the voices of users in shaping strategies and implementation; (3) overcome siloed structures in government for effective governance; (4) establish robust frameworks for the responsible use of AI; (5) improve the scalability and replicability of successful AI initiatives; (6) enable a more systematic use of AI in and by the public sector; and (7) adopt an incremental and experimental approach to the deployment and use of AI in and by the public sector.",
+    "headline": "UNESCO, OECD and G7 release toolkit for AI in the public sector",
+    "jurisdictions": [
+      "G7",
+      "OECD"
+    ],
+    "published": "2024-10-15"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "UNESCO, OECD and G7 release toolkit for AI in the public sector",
+    "jurisdictions": [
+      "G7",
+      "OECD"
+    ],
+    "published": "2024-10-15"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "oecd.org/en/publications/g7-toolkit-for-artificial-intelligence-in-the-public-sector_421c1244-en.html",
+      "oecd.org/content/dam/oecd/en/publications/reports/2024/10/g7-toolkit-for-artificial-intelligence-in-the-public-sector_f93fb9fb/421c1244-en.pdf",
+      "g7italy.it/wp-content/uploads/1728922597-g7-toolkit-for-ai-in-the-public-sector.pdf",
+      "unesco.org/en/articles/paving-way-responsible-ai-unesco-and-g7-toolkit-initiative",
+      "innovazione.gov.it/notizie/articoli/en/the-g7-tech-and-digital-ministerial-meeting-s-joint-statement"
+    ],
+    "canonical_url": "https://www.oecd.org/en/publications/g7-toolkit-for-artificial-intelligence-in-the-public-sector_421c1244-en.html",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "guidance",
+    "jurisdiction": "G7",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "International",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

@@ -1,0 +1,52 @@
+{
+  "as_of_date": "2026-04-28",
+  "example_id": "find_primary_source-7d9f649d0ddd",
+  "input": {
+    "article_url": null,
+    "headline": "UK technology minister, in a defence think-tank speech, urges AI sovereignty, outlining a roughly half-billion-pound fund for domestic AI firms and partnerships with Germany, Canada, Japan.",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-04-28"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "In a speech at the Royal United Services Institute, UK Tech Secretary Liz Kendall emphasized the urgent need for the UK to adapt to the disruptions caused by geopolitical shifts and technological advancements, particularly in AI. Identifying AI as the defining currency of the future, Kendall argued that nations that master AI will lead in economic and military power. The Tech Secretary also stressed the importance of AI sovereignty, which for the UK means reducing dependencies while fostering innovation and collaboration with international partners. Kendall outlined the government's initiatives, including the launch of Sovereign AI, which aims to invest \u00a3500 million in British AI companies and enhance the nation's AI hardware capabilities, as well as reinforced partnerships with countries such as Germany, Canada, and Japan. In conclusion, the Tech Secretary asserted that the UK must actively shape its AI future to ensure national interests are prioritized, advocating a proactive approach rather than retreating from technological progress.",
+    "headline": "UK Tech Secretary calls for \"rebuilding Britain for the new world\"",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-04-28"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "UK Tech Secretary calls for \"rebuilding Britain for the new world\"",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-04-28"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "gov.uk/government/speeches/rebuilding-britain-for-the-new-world-liz-kendalls-speech-at-the-royal-united-services-institute",
+      "gov.uk/government/news/britain-must-secure-greater-control-and-leverage-over-ai-to-protect-our-national-security-in-fractured-world"
+    ],
+    "canonical_url": "https://www.gov.uk/government/speeches/rebuilding-britain-for-the-new-world-liz-kendalls-speech-at-the-royal-united-services-institute",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "strategy",
+    "jurisdiction": "GB",
+    "legal_domain": "national_security",
+    "legal_domains": [
+      "national_security",
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

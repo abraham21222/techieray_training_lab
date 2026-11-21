@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2025-04-22",
+  "example_id": "find_primary_source-978c6ae1cfe2",
+  "input": {
+    "article_url": null,
+    "headline": "US city mayor issues executive directive ordering city building department to report within a month on AI pilot to assist review of wildfire rebuilding permits.",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2025-04-22"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "An executive directive to establish a Los Angeles AI pilot program. It directs the Department of Building and Safety to report within 30 days on an AI pilot supporting review of wildfire rebuilding projects. It requires recommendations on feasibility, scope, safeguards, and appropriate workflow uses; AI is described as supporting professional judgment.",
+    "headline": "Los Angeles Executive Directive 10: AI Pilot Program",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2025-04-22"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Los Angeles Executive Directive 10: AI Pilot Program",
+    "jurisdictions": [
+      "US-CA"
+    ],
+    "published": "2025-04-22"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "mayor.lacity.gov/sites/g/files/wph2066/files/2025-04/ED%2010%20-%20Artificial%20Intelligence%20Pilot%20Program.pdf"
+    ],
+    "authoritative_hosts": [
+      "calcivilrights.ca.gov",
+      "cppa.ca.gov",
+      "gov.ca.gov",
+      "leginfo.legislature.ca.gov",
+      "mayor.lacity.gov"
+    ],
+    "authoritative_url_fragments": [
+      "mayor.lacity.gov/sites/g/files/wph2066/files/2025-04/ED%2010%20-%20Artificial%20Intelligence%20Pilot%20Program.pdf"
+    ],
+    "canonical_url": "https://mayor.lacity.gov/sites/g/files/wph2066/files/2025-04/ED%2010%20-%20Artificial%20Intelligence%20Pilot%20Program.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "executive_order",
+    "jurisdiction": "US-CA",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "pdf",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

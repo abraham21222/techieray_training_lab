@@ -1,0 +1,53 @@
+{
+  "as_of_date": "2026-03-30",
+  "example_id": "find_primary_source-291bfe01383e",
+  "input": {
+    "article_url": null,
+    "headline": "Southeast Asian bloc and China reaffirm strategic partnership at joint cooperation committee meeting, noting completed five-year action plan and new plan covering AI, crime, health.",
+    "jurisdictions": [
+      "ASEAN",
+      "CN"
+    ],
+    "published": "2026-03-30"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "ASEAN and China have reaffirmed their commitment to advancing cooperation under their Comprehensive Strategic Partnership (CSP) at the 27th Meeting of the ASEAN-China Joint Cooperation Committee (ACJCC), held at the ASEAN Secretariat. The meeting acknowledged the completion of the Plan of Action (POA) for 2021-2025 and the ongoing implementation of the POA for 2026-2030. The latter focuses on enhancing cooperation in areas such as transnational crime, science and technology, artificial intelligence (AI), agriculture and food security, tourism, education, public health, media, and disaster management. Both parties recognized 2026 as the ASEAN-China Year marking the fifth anniversary of the CSP, providing an opportunity to assess achievements and strengthen relations through various initiatives.",
+    "headline": "ASEAN and China reinforce commitment to deepening comprehensive strategic partnership",
+    "jurisdictions": [
+      "ASEAN",
+      "CN"
+    ],
+    "published": "2026-03-30"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "ASEAN and China reinforce commitment to deepening comprehensive strategic partnership",
+    "jurisdictions": [
+      "ASEAN",
+      "CN"
+    ],
+    "published": "2026-03-30"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "asean.org/asean-and-china-reinforce-commitment-to-deepening-comprehensive-strategic-partnership"
+    ],
+    "canonical_url": "https://asean.org/asean-and-china-reinforce-commitment-to-deepening-comprehensive-strategic-partnership/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "ASEAN",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

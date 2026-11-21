@@ -1,0 +1,61 @@
+{
+  "as_of_date": "2024-07-26",
+  "example_id": "find_primary_source-7307095c7864",
+  "input": {
+    "article_url": null,
+    "headline": "Argentina's security ministry creates AI unit for crime-fighting: real-time facial recognition, drone surveillance, social media and dark web monitoring, predictive crime analysis.",
+    "jurisdictions": [
+      "AR"
+    ],
+    "published": "2024-07-26"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Argentina's Ministry of Security has established the Artificial Intelligence Unit Applied to Security (UIAAS) under Resolution 710/2024. The new unit is tasked with integrating AI into crime investigations, including analysing camera footage with real-time facial recognition, drone surveillance, scanning social media, applying machine learning to analyze historical crime data to predict future crimes, collecting data to create suspect profiles, scouring the dark web and preventing cyberattacks.",
+    "headline": "Argentina establishes AI security unit",
+    "jurisdictions": [
+      "AR"
+    ],
+    "published": "2024-07-26"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Argentina establishes AI security unit",
+    "jurisdictions": [
+      "AR"
+    ],
+    "published": "2024-07-26"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "boletinoficial.gob.ar/detalleAviso/primera/311381/20240729"
+    ],
+    "authoritative_hosts": [
+      "argentina.gob.ar",
+      "boletinoficial.gob.ar",
+      "diputados.gov.ar",
+      "hcdn.gob.ar"
+    ],
+    "authoritative_url_fragments": [
+      "boletinoficial.gob.ar/detalleAviso/primera/311381/20240729"
+    ],
+    "canonical_url": "https://boletinoficial.gob.ar/detalleAviso/primera/311381/20240729",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "AR",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "cybersecurity",
+      "criminal_justice"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "es",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

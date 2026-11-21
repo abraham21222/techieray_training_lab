@@ -1,0 +1,57 @@
+{
+  "as_of_date": "2025-07-06",
+  "example_id": "find_primary_source-b05af09f7e56",
+  "input": {
+    "article_url": null,
+    "headline": "China and Brazil sign memorandum to set up joint AI application cooperation centre for open-source services and talent training, alongside broader development-strategy cooperation pact.",
+    "jurisdictions": [
+      "BR",
+      "CN"
+    ],
+    "published": "2025-07-06"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "China and Brazil have signed a range of cooperation documents in fields such as infrastructure, pharmaceuticals, new energy, AI and development strategy alignment, as part of their efforts to promote bilateral ties. These include a memorandum of understanding on the second phase of cooperation in aligning the two countries\u2019 development strategies, under which the two sides agreed to expand cooperation in AI and other areas. Officials of China\u2019s National Development and Reform Commission (NDRC) and the Ministry of Science, Technology, and Innovation of Brazil also signed a memorandum of understanding on establishing an AI application cooperation centre. The centre aims to promote collaboration in AI, including by: (1) consolidating the foundation for AI development; (2) providing open-source and open-access services; and (3) supporting talent cultivation.",
+    "headline": "China and Brazil expand cooperation in AI",
+    "jurisdictions": [
+      "BR",
+      "CN"
+    ],
+    "published": "2025-07-06"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "China and Brazil expand cooperation in AI",
+    "jurisdictions": [
+      "BR",
+      "CN"
+    ],
+    "published": "2025-07-06"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "ndrc.gov.cn/fzggw/wld/lss/zygz/202507/t20250707_1399017.html",
+      "gov.br/planalto/en/latest-news/2025/07/with-chinese-prime-minister-lula-emphasizes-excellent-moment-in-bilateral-relations",
+      "gov.br/planalto/pt-br/acompanhe-o-planalto/noticias/2025/07/com-primeiro-ministro-da-china-lula-enfatiza-excelente-momento-da-relacao-bilateral",
+      "agenciagov.ebc.com.br/noticias/202507/com-primeiro-ministro-da-china-lula-enfatiza-excelente-momento-da-relacao-bilateral"
+    ],
+    "canonical_url": "https://www.ndrc.gov.cn/fzggw/wld/lss/zygz/202507/t20250707_1399017.html",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "BR",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector",
+      "trade"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "zh",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

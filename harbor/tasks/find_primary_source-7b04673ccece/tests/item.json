@@ -1,0 +1,58 @@
+{
+  "as_of_date": "2026-03-06",
+  "example_id": "find_primary_source-7b04673ccece",
+  "input": {
+    "article_url": null,
+    "headline": "Canada and Japan leaders sign partnership deal: defence exercises, economic security and cyber dialogues, critical minerals and energy supply chains, free and open Indo-Pacific.",
+    "jurisdictions": [
+      "CA",
+      "JP"
+    ],
+    "published": "2026-03-06"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Prime Ministers of Canada and Japan have signed a Comprehensive Strategic Partnership to enhance cooperation in defense, energy, trade, and technology. The agreement includes establishing dialogues on economic security and cyber policy, expanding military collaboration through joint exercises, and strengthening supply chains for critical minerals and energy resources. The partnership aims to deepen bilateral relations and promote a free and open Indo-Pacific region.",
+    "headline": "Canada and Japan sign strategic pact on defence, energy and AI",
+    "jurisdictions": [
+      "CA",
+      "JP"
+    ],
+    "published": "2026-03-06"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Canada and Japan sign strategic pact on defence, energy and AI",
+    "jurisdictions": [
+      "CA",
+      "JP"
+    ],
+    "published": "2026-03-06"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "pm.gc.ca/en/news/statements/2026/03/06/joint-statement-canada-japan-comprehensive-strategic-partnership",
+      "pm.gc.ca/en/node/52451",
+      "pm.gc.ca/en/news/news-releases/2026/03/06/prime-minister-carney-forges-new-comprehensive-strategic-partnership",
+      "pm.gc.ca/en/node/52452",
+      "pm.gc.ca/en/node/52455"
+    ],
+    "canonical_url": "https://www.pm.gc.ca/en/news/statements/2026/03/06/joint-statement-canada-japan-comprehensive-strategic-partnership",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "CA",
+    "legal_domain": "national_security",
+    "legal_domains": [
+      "national_security",
+      "trade"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

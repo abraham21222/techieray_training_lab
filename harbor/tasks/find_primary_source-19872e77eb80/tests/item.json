@@ -1,0 +1,58 @@
+{
+  "as_of_date": "2025-12-09",
+  "example_id": "find_primary_source-19872e77eb80",
+  "input": {
+    "article_url": null,
+    "headline": "G7 industry and digital ministers, meeting in Canada, issue joint declaration on AI, quantum and supply chains, plus a plan to help small firms adopt AI.",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2025-12-09"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The G7 Industry, Digital and Technology Ministers\u2019 Meeting 2025, held in Montr\u00e9al under Canada\u2019s G7 presidency, brought together ministers to advance cooperation on AI, quantum technologies, digital policy and industrial resilience. The meeting produced a set of headline political and technical deliverables that structure the G7\u2019s digital\u2013industry agenda for the coming period. The core political outcome was the G7 2025 Industry, Digital and Technology Ministerial Declaration, which set out shared commitments on: (1) using AI for inclusive economic growth; (2) developing quantum technologies; (3) strengthening a resilient and competitive digital economy; and (4) reinforcing secure and resilient industrial and digital supply chains. A second major outcome was the G7 Industry, Digital and Technology Ministerial Statement on the SME AI Adoption Blueprint. The statement translated the leaders\u2019 \u201cAI for Prosperity\u201d direction into a targeted agenda for helping small and medium-sized enterprises (SMEs) adopt AI safely and effectively while respecting competition, data protection and intellectual property frameworks. Linked to that statement, the SME AI Adoption Blueprint itself was issued as a practical, more technical deliverable. It offers concrete guidance, policy options, examples and support measures that G7 governments can use to lower barriers and scale responsible AI uptake by SMEs across their economies.",
+    "headline": "G7 Industry, Digital and Technology Ministers' Meeting 2025",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2025-12-09"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "G7 Industry, Digital and Technology Ministers' Meeting 2025",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2025-12-09"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "canada.ca/en/innovation-science-economic-development/news/2025/12/canada-advances-international-cooperation-on-industry-ai-and-digital-technology-at-the-g7-industry-digital-and-technology-ministers-meeting.html",
+      "ised-isde.canada.ca/site/ised/en/g7-2025-industry-digital-and-technology-ministerial-declaration",
+      "ised-isde.canada.ca/site/isde/fr/node/679",
+      "ised-isde.canada.ca/site/ised/en/g7-industry-digital-and-technology-ministerial-statement-sme-ai-adoption-blueprint",
+      "ised-isde.canada.ca/site/ised/en/sme-ai-adoption-blueprint",
+      "ised-isde.canada.ca/site/ised/en/node/670",
+      "gov.uk/government/publications/g7-ministerial-declaration-montreal-canada-8-to-9-december-2025",
+      "soumu.go.jp/main_sosiki/joho_tsusin/eng/pressrelease/2025/12/10_1.html"
+    ],
+    "canonical_url": "https://www.canada.ca/en/innovation-science-economic-development/news/2025/12/canada-advances-international-cooperation-on-industry-ai-and-digital-technology-at-the-g7-industry-digital-and-technology-ministers-meeting.html",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "declaration",
+    "jurisdiction": "G7",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector",
+      "trade"
+    ],
+    "question_form": "vague_alert",
+    "region": "International",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

@@ -1,0 +1,50 @@
+{
+  "as_of_date": "2026-02-24",
+  "example_id": "find_primary_source-494dde36c08d",
+  "input": {
+    "article_url": null,
+    "headline": "Australian junior digital economy minister urges domestic AI industry, renewable-powered data centres, warning foreign platforms could capture AI profits; targets billions in annual revenue.",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2026-02-24"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "In a speech to the Australian Business Economics conference, Assistant Technology and Digital Economy Minister Andrew Charlton cautioned against the \"Uberisation\" of the Australian economy, a trajectory in which the nation merely rents foreign digital platforms and allows the resulting profits to flow offshore. Characterizing AI as a critical general-purpose technology akin to electrification, the Minister argued that while AI will inevitably reorganize global production, the domestic distribution of its benefits depends entirely on ownership and market structure. Charlton emphasized that without a strategic \"pro-creation\" approach, Australia risks a \"productivity paradox\" in which efficiency rises but national income stagnates as rents accrue to foreign capital. To mitigate this, the Minister proposed a comprehensive \"AI stack\" strategy that leverages Australia\u2019s comparative advantage in renewable energy to underwrite a domestic data center industry, noting that the country receives 58 million petajoules of solar radiation annually. By targeting a 0.5% increase in global AI market share, the government aims to generate an additional $25 billion in annual revenue and secure high-value employment. Ultimately, the address serves as a call for urgent, values-driven policy to ensure that the transition to an AI-driven economy augments the Australian labor force and fosters a \"Future Made in Australia\" rather than entrenching global capital concentration.",
+    "headline": "Assistant Digital Economy Minister calls for local AI innovation to prevent \u2018Uberisation\u2019 of the economy",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2026-02-24"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Assistant Digital Economy Minister calls for local AI innovation to prevent \u2018Uberisation\u2019 of the economy",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2026-02-24"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "minister.industry.gov.au/ministers/charlton/speeches/speech-australian-business-economists-conference"
+    ],
+    "canonical_url": "https://www.minister.industry.gov.au/ministers/charlton/speeches/speech-australian-business-economists-conference",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "enforcement_action",
+    "jurisdiction": "AU",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

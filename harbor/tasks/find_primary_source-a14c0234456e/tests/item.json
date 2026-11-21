@@ -1,0 +1,54 @@
+{
+  "as_of_date": "2026-09-29",
+  "example_id": "find_primary_source-a14c0234456e",
+  "input": {
+    "article_url": null,
+    "headline": "Nigeria's information minister urges broadcasters to verify facts, avoid hate speech and counter AI-generated misinformation ahead of upcoming national elections, speaking at a broadcasters' conference.",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-09-29"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Speaking at the 3rd Annual National Conference of the Society of Nigerian Broadcasters in Bauchi, Nigeria, Information and National Orientation Minister Mohammed Idris called on broadcasters to uphold accuracy, fairness and professional ethics as Nigeria approaches the 2027 elections. Represented by Voice of Nigeria (VON) Director-General Jibrin Baba Ndace, the Minister said broadcasters should verify information, distinguish facts from allegations, opinions and unverified claims, and provide properly contextualised reporting while continuing to scrutinise government, political parties, candidates and public institutions. Idris warned that AI and social media make it easier to spread false and manipulated content, and urged broadcasters to avoid hate speech, ethnic or religious provocation, and deliberate circulation of false information during the electoral period while preserving space for legitimate debate and criticism. The Minister also called on the Society and broadcasters to strengthen professional training, election reporting, verification and measures against AI-generated misinformation. Idris cited Federal Government investment in broadcasting, including the Digital Switch Over platform and the modernisation of the Nigerian Television Authority (NTA), the Federal Radio Corporation of Nigeria (FRCN) and VON.",
+    "headline": "Nigeria\u2019s information minister calls for responsible broadcasting on AI",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-09-29"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Nigeria\u2019s information minister calls for responsible broadcasting on AI",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-09-29"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "fmino.gov.ng/2027-elections-information-minister-calls-for-responsible-broadcasting-to-protect-democracy",
+      "von.gov.ng/2027-elections-broadcasters-urged-to-uphold-professional-ethics",
+      "von.gov.ng/2027-polls-nigerian-government-tasks-broadcasters-on-responsible-reporting",
+      "fmino.gov.ng/bauchi-hosts-snb-annual-general-meeting-as-industry-leaders-tackle-digital-disinformation"
+    ],
+    "canonical_url": "https://fmino.gov.ng/2027-elections-information-minister-calls-for-responsible-broadcasting-to-protect-democracy/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "other",
+    "jurisdiction": "NG",
+    "legal_domain": "online_safety",
+    "legal_domains": [
+      "online_safety",
+      "human_rights"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

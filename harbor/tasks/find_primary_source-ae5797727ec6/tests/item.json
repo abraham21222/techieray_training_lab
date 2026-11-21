@@ -1,0 +1,65 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-ae5797727ec6",
+  "input": {
+    "article_url": null,
+    "headline": "US bill would direct federal communications and trade regulators to write rules requiring companies to get parental consent before offering AI-powered products to minors.",
+    "jurisdictions": [
+      "US"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The bill would require the Federal Communications Commission (FCC) and the Federal Trade Commission (FTC) to draft rules requiring firms to receive parental consent before offering products that employ artificial intelligence (AI) features to minors.",
+    "headline": "ASK Act",
+    "jurisdictions": [
+      "US"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "ASK Act",
+    "jurisdictions": [
+      "US"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "congress.gov/bill/118th-congress/senate-bill/1626/text?s=3&r=24&q=%7B%22search%22%3A%22Artificial+Intelligence%22%7D"
+    ],
+    "authoritative_hosts": [
+      "congress.gov",
+      "docs.fcc.gov",
+      "elibrary.ferc.gov",
+      "federalregister.gov",
+      "ftc.gov",
+      "govinfo.gov",
+      "justice.gov",
+      "uscode.house.gov",
+      "whitehouse.gov"
+    ],
+    "authoritative_url_fragments": [
+      "congress.gov/bill/118th-congress/senate-bill/1626/text?s=3&r=24&q=%7B%22search%22%3A%22Artificial+Intelligence%22%7D"
+    ],
+    "canonical_url": "https://congress.gov/bill/118th-congress/senate-bill/1626/text?s=3&r=24&q=%7B%22search%22%3A%22Artificial+Intelligence%22%7D",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "US",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

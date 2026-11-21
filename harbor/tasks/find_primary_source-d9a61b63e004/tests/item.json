@@ -1,0 +1,54 @@
+{
+  "as_of_date": "2024-04-12",
+  "example_id": "find_primary_source-d9a61b63e004",
+  "input": {
+    "article_url": null,
+    "headline": "India's telecom regulator adopts recommendations for a sandbox framework testing innovations like AI in digital communications, stressing network security, consumer protection, exemptions and exit strategy.",
+    "jurisdictions": [
+      "IN"
+    ],
+    "published": "2024-04-12"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Telecom Regulatory Authority of India (TRAI) adopted its recommendations for a regulatory sandbox framework aimed at supporting innovation in areas such as AI in the digital communication sector. The framework will emphasise network security and consumer protection, and includes provisions for regulatory exemptions, risk mitigation, and a well-defined exit strategy.",
+    "headline": "TRAI adopts recommendations for regulatory sandbox in digital communication sector",
+    "jurisdictions": [
+      "IN"
+    ],
+    "published": "2024-04-12"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "TRAI adopts recommendations for regulatory sandbox in digital communication sector",
+    "jurisdictions": [
+      "IN"
+    ],
+    "published": "2024-04-12"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "trai.gov.in/notifications/press-release/trai-releases-recommendations-encouraging-innovative-technologies",
+      "trai.gov.in/sites/default/files/2024-09/Recommendation_12042024_0.pdf",
+      "trai.gov.in/sites/default/files/2024-09/Letter_to_secy_DOT_12042024.pdf",
+      "trai.gov.in/sites/default/files/2024-09/PR_No.19of2024.pdf"
+    ],
+    "canonical_url": "https://www.trai.gov.in/notifications/press-release/trai-releases-recommendations-encouraging-innovative-technologies",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "other",
+    "jurisdiction": "IN",
+    "legal_domain": "consumer",
+    "legal_domains": [
+      "consumer",
+      "telecoms"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

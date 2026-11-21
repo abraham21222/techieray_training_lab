@@ -1,0 +1,55 @@
+{
+  "as_of_date": "2024-11-06",
+  "example_id": "find_primary_source-864db2fad3b9",
+  "input": {
+    "article_url": null,
+    "headline": "UK and Singapore announce AI safety partnership, linking their national AI safety institutes on research, information sharing and comprehensive testing of AI systems.",
+    "jurisdictions": [
+      "GB",
+      "SG"
+    ],
+    "published": "2024-11-06"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The UK and Singapore have announced a new AI safety partnership which will strengthen cooperation between the AI safety institutes of both countries in areas such as research, information sharing and comprehensive AI testing.",
+    "headline": "Singapore and UK sign AI safety agreement",
+    "jurisdictions": [
+      "GB",
+      "SG"
+    ],
+    "published": "2024-11-06"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Singapore and UK sign AI safety agreement",
+    "jurisdictions": [
+      "GB",
+      "SG"
+    ],
+    "published": "2024-11-06"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "mddi.gov.sg/new-singapore-uk-agreement-to-strengthen-global-ai-safety-and-governance",
+      "gov.uk/government/news/ensuring-trust-in-ai-to-unlock-65-billion-over-next-decade",
+      "mddi.gov.sg/newsroom/new-singapore-uk-agreement-to-strengthen-global-ai-safety-governance"
+    ],
+    "canonical_url": "https://www.mddi.gov.sg/new-singapore-uk-agreement-to-strengthen-global-ai-safety-and-governance/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "GB",
+    "legal_domain": "cybersecurity",
+    "legal_domains": [
+      "cybersecurity"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

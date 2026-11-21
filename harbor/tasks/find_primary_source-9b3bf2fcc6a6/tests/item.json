@@ -1,0 +1,62 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-9b3bf2fcc6a6",
+  "input": {
+    "article_url": null,
+    "headline": "China proposes draft rules for AI services simulating human personalities, requiring providers to monitor users' emotions and dependence and intervene on addiction or extreme emotions.",
+    "jurisdictions": [
+      "CN"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "These measures aim to tighten oversight of AI services designed to simulate human personalities and engage users in emotional interaction. The proposed rules would apply to AI products and services offered to the public in China that present simulated human personality traits, thinking patterns and communication styles, and interact with users emotionally through text, images, audio, video or other means. The proposed measures would: (1) require service providers to assume safety responsibilities throughout the product lifecycle and establish systems for algorithm review, data security and personal information protection; (2) target potential psychological risks by requiring providers to identify user states and assess users' emotions and their level of dependence on the service; (3) require providers to take necessary measures to intervene if users are found to exhibit extreme emotions or addictive behaviour; and (4) set content and conduct red lines, stating that services must not generate content that endangers national security, spreads rumours or promotes violence or obscenity.",
+    "headline": "Interim Measures for the Administration of Humanized Interactive Services Based on Artificial Intelligence",
+    "jurisdictions": [
+      "CN"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Interim Measures for the Administration of Humanized Interactive Services Based on Artificial Intelligence",
+    "jurisdictions": [
+      "CN"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "cac.gov.cn/2025-12/27/c_1768571207311996.htm",
+      "wxb.xzdw.gov.cn/xxh/ghzc/202512/t20251228_636848.html"
+    ],
+    "authoritative_hosts": [
+      "cac.gov.cn",
+      "flk.npc.gov.cn",
+      "gov.cn",
+      "miit.gov.cn",
+      "npc.gov.cn"
+    ],
+    "authoritative_url_fragments": [
+      "cac.gov.cn/2025-12/27/c_1768571207311996.htm"
+    ],
+    "canonical_url": "https://cac.gov.cn/2025-12/27/c_1768571207311996.htm",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "executive_order",
+    "jurisdiction": "CN",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "html",
+    "source_language_guess": "zh",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

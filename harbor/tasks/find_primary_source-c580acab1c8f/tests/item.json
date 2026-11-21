@@ -1,0 +1,59 @@
+{
+  "as_of_date": "2025-12-25",
+  "example_id": "find_primary_source-c580acab1c8f",
+  "input": {
+    "article_url": null,
+    "headline": "T\u00fcrkiye presidential decree renames national technology directorate to include AI and creates new public-sector AI directorate under presidency's cybersecurity body, setting data-center standards.",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2025-12-25"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Under Presidential Decree No. 191, published in the Official Gazette, T\u00fcrkiye has expanded its AI governance by renaming the Directorate General of National Technology as the Directorate General of National Technology and Artificial Intelligence. The renamed directorate will develop policies to enhance data center and cloud computing infrastructure, set standards for data centers, and oversee certification processes. Additionally, a Public Artificial Intelligence Directorate General has been established under the Presidency's Cybersecurity Directorate to guide AI use across government institutions, align national legislation with international frameworks, and set data governance standards for digital government and public sector AI applications.",
+    "headline": "T\u00fcrkiye broadens tech governance with new AI directorates",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2025-12-25"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "T\u00fcrkiye broadens tech governance with new AI directorates",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2025-12-25"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "resmigazete.gov.tr/eskiler/2025/12/20251225-12.pdf"
+    ],
+    "authoritative_hosts": [
+      "mevzuat.gov.tr",
+      "resmigazete.gov.tr",
+      "tbmm.gov.tr"
+    ],
+    "authoritative_url_fragments": [
+      "resmigazete.gov.tr/eskiler/2025/12/20251225-12.pdf"
+    ],
+    "canonical_url": "https://resmigazete.gov.tr/eskiler/2025/12/20251225-12.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "TR",
+    "legal_domain": "cybersecurity",
+    "legal_domains": [
+      "cybersecurity",
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Middle East",
+    "source_format": "pdf",
+    "source_language_guess": "tr",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

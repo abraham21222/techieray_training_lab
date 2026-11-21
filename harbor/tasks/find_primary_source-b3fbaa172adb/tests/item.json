@@ -1,0 +1,51 @@
+{
+  "as_of_date": "2026-07-07",
+  "example_id": "find_primary_source-b3fbaa172adb",
+  "input": {
+    "article_url": null,
+    "headline": "Nigeria's digital economy ministry tells three sector regulators to pause enforcing new internet platform rules while a joint committee builds one harmonised national framework.",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-07-07"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Nigeria\u2019s Federal Ministry of Communications, Innovation and Digital Economy, led by Minister Dr. \u2018Bosun Tijani, has directed relevant sector regulators to maintain the regulatory status quo and defer the enforcement of recently issued regulations concerning Internet platforms and online intermediaries. The directive applies specifically to the Nigerian Communications Commission (NCC), the National Information Technology Development Agency (NITDA), and the Nigeria Data Protection Commission (NDPC). It aims to preserve legal certainty, promote innovation, and protect investor confidence while the Ministry coordinates the development of a harmonized national policy and governance framework. To execute this alignment without diminishing the statutory mandates of the individual agencies, the Ministry is establishing a Joint Technical Coordination Committee to spearhead technical engagements and consult with industry stakeholders, academia, and civil society. The aim is to ensure a unified, predictable, and future-ready regulatory approach to cross-cutting digital economy issues such as AI, online safety, and data governance.",
+    "headline": "Nigeria directs a harmonised approach to internet platform regulation",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-07-07"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Nigeria directs a harmonised approach to internet platform regulation",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-07-07"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "fmcide.gov.ng/federal-ministry-directs-harmonised-approach-to-the-regulation-of-internet-platforms-and-online-intermediaries",
+      "fmcide.gov.ng/?p=4149"
+    ],
+    "canonical_url": "https://fmcide.gov.ng/federal-ministry-directs-harmonised-approach-to-the-regulation-of-internet-platforms-and-online-intermediaries/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "guidance",
+    "jurisdiction": "NG",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

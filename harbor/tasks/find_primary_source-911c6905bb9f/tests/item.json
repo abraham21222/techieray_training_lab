@@ -1,0 +1,51 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-911c6905bb9f",
+  "input": {
+    "article_url": null,
+    "headline": "Kenya: Government-appointed taskforce issues report recommending blockchain and AI to fight corruption, boost state transparency and uphold human rights in emerging-technology adoption.",
+    "jurisdictions": [
+      "KE"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "This report provides the government with a strategic course on how to develop a roadmap to uphold human rights when adopting emerging technologies like AI. The report recommends how to leverage blockchain and AI to combat corruption and augment state transparency.",
+    "headline": "Distributed Ledger Technology and Artificial Intelligence Taskforce report (2019)",
+    "jurisdictions": [
+      "KE"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Distributed Ledger Technology and Artificial Intelligence Taskforce report (2019)",
+    "jurisdictions": [
+      "KE"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "ict.go.ke/report-on-distributed-ledger-and-artificial-intelligence-launched"
+    ],
+    "canonical_url": "https://ict.go.ke/report-on-distributed-ledger-and-artificial-intelligence-launched/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "strategy",
+    "jurisdiction": "KE",
+    "legal_domain": "human_rights",
+    "legal_domains": [
+      "human_rights",
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

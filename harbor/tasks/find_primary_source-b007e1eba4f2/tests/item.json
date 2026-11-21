@@ -1,0 +1,55 @@
+{
+  "as_of_date": "2025-09-02",
+  "example_id": "find_primary_source-b007e1eba4f2",
+  "input": {
+    "article_url": null,
+    "headline": "Uruguay becomes first Latin American country to sign a European intergovernmental body's binding international treaty on artificial intelligence, human rights, democracy and rule of law.",
+    "jurisdictions": [
+      "COE",
+      "UY"
+    ],
+    "published": "2025-09-02"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Uruguay has signed the Council of Europe\u2019s Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law, the first-ever international legally binding treaty aimed at ensuring that the use of AI systems is fully consistent with human rights, democracy and the rule of law. As the first Latin American country to sign the treaty, Uruguay has joined the 16 other signatories to date (eleven Council of Europe member states, as well as Canada, Israel, Japan, the USA, and the EU).",
+    "headline": "Uruguay signs Council of Europe\u2019s global AI treaty",
+    "jurisdictions": [
+      "COE",
+      "UY"
+    ],
+    "published": "2025-09-02"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Uruguay signs Council of Europe\u2019s global AI treaty",
+    "jurisdictions": [
+      "COE",
+      "UY"
+    ],
+    "published": "2025-09-02"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "coe.int/be/web/portal/-/uruguay-signs-council-of-europe-s-global-ai-treaty",
+      "gub.uy/agencia-gobierno-electronico-sociedad-informacion-conocimiento/comunicacion/noticias/tratado-del-consejo-europa-sobre-ia-uruguay-es-primer-pais-latinoamerica",
+      "treatydatabase.overheid.nl/en/Treaty/Details/013947_p"
+    ],
+    "canonical_url": "https://www.coe.int/be/web/portal/-/uruguay-signs-council-of-europe-s-global-ai-treaty",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "treaty",
+    "jurisdiction": "COE",
+    "legal_domain": "human_rights",
+    "legal_domains": [
+      "human_rights"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

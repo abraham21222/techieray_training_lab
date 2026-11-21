@@ -1,0 +1,31 @@
+{
+  "as_of_date": "2024-04-01",
+  "example_id": "find_primary_source-55c2c1387895",
+  "input": {
+    "article_url": null,
+    "headline": "Bangladesh's national ICT authority signs memorandum with the UK AI safety body to jointly test advanced AI models, share information and exchange experts.",
+    "jurisdictions": [
+      "BD"
+    ],
+    "published": "2024-04-01"
+  },
+  "input_full": null,
+  "input_named": null,
+  "reference": {
+    "accepted_url_fragments": [],
+    "canonical_url": null,
+    "no_official_source": true
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "BD",
+    "legal_domain": "ai_specific",
+    "legal_domains": [
+      "ai_specific"
+    ],
+    "question_form": "counterfactual_alert",
+    "region": "Asia-Pacific",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

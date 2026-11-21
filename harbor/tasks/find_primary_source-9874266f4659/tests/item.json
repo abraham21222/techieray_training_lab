@@ -1,0 +1,50 @@
+{
+  "as_of_date": "2025-07-15",
+  "example_id": "find_primary_source-9874266f4659",
+  "input": {
+    "article_url": null,
+    "headline": "Spain's data protection authority says it can already act against banned AI systems that process personal data, ahead of the EU's AI rules taking full effect.",
+    "jurisdictions": [
+      "ES"
+    ],
+    "published": "2025-07-15"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Spanish Data Protection Agency (AEPD) has issued guidance clarifying that it can already act against prohibited AI systems that process personal data before the EU AI Act is fully in force. From 2 August 2025, supervisory and sanctioning provisions under Article 5 of the AI Act, covering banned AI systems such as real-time biometric identification in public spaces, will begin to apply. Although Spain has not yet adopted its national AI law and the AEPD has not formally been designated as a market surveillance authority, the agency remains empowered to act in its capacity as data protection authority. This includes overseeing AI-driven data processing where it infringes data protection rights. The AEPD advises organisations using AI to begin preparing for AI Act compliance and is assessing the internal resources it needs to fulfil future responsibilities under the regulation.",
+    "headline": "AEPD issues clarification on its authority to enforce EU AI Act",
+    "jurisdictions": [
+      "ES"
+    ],
+    "published": "2025-07-15"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "AEPD issues clarification on its authority to enforce EU AI Act",
+    "jurisdictions": [
+      "ES"
+    ],
+    "published": "2025-07-15"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recuerda-que-ya-puede-actuar-ante-sistemas-de-ia"
+    ],
+    "canonical_url": "https://www.aepd.es/prensa-y-comunicacion/notas-de-prensa/la-aepd-recuerda-que-ya-puede-actuar-ante-sistemas-de-ia",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "enforcement_action",
+    "jurisdiction": "ES",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "es",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

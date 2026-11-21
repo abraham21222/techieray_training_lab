@@ -1,0 +1,50 @@
+{
+  "as_of_date": "2026-09-22",
+  "example_id": "find_primary_source-dce3c01bf369",
+  "input": {
+    "article_url": null,
+    "headline": "G7 ministers agree to set up a high-level group on advanced AI safety, plan to share risk assessments and evaluation methods, and work toward common international standards.",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2026-09-22"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Speaking at the G7 ministerial meeting on AI safety, Adolfo Urso, Italy\u2019s Minister of Enterprises and Made in Italy, called for shared responses and common standards to address the risks and opportunities of advanced AI systems. The meeting concluded with a decision to establish a High Level Group on AI safety and to hold another meeting soon. Ministers discussed sharing assessments of emerging risks, safety-evaluation methodologies and data, as well as advancing convergence on international standards and regulations based on shared principles.",
+    "headline": "G7 ministers agree to establish High Level Group on AI safety",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2026-09-22"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "G7 ministers agree to establish High Level Group on AI safety",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": "2026-09-22"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "mimit.gov.it/it/notizie-stampa/ia-urso-ai-ministri-g7-nessun-paese-puo-affrontare-questa-sfida-da-solo-servono-risposte-comuni-con-standard-condivisi"
+    ],
+    "canonical_url": "https://www.mimit.gov.it/it/notizie-stampa/ia-urso-ai-ministri-g7-nessun-paese-puo-affrontare-questa-sfida-da-solo-servono-risposte-comuni-con-standard-condivisi",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "other",
+    "jurisdiction": "G7",
+    "legal_domain": "ai_specific",
+    "legal_domains": [
+      "ai_specific"
+    ],
+    "question_form": "vague_alert",
+    "region": "International",
+    "source_format": "html",
+    "source_language_guess": "it",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

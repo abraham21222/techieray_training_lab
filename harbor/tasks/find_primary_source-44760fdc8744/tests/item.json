@@ -1,0 +1,55 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-44760fdc8744",
+  "input": {
+    "article_url": null,
+    "headline": "G7 leaders issue joint summit statement endorsing shared principles for children's online safety, urging default safeguards on conversational AI tools and age assurance for minors.",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The G7 heads of state and government, comprising the United States, United Kingdom, Canada, France, Germany, Italy, and Japan, along with the President of the European Council and the President of the European Commission, issued joint statements at the 52nd G7 Summit in \u00c9vian-les-Bains, France. The statements include commitments relevant to AI governance, emphasizing the development and application of AI systems that ensure safe, secure, and age-appropriate digital experiences for minors, with a focus on online safety for children and youth under 18. Among other matters, the G7: (1) recognizes the opportunities and risks associated with conversational AI tools, emphasizing the need for safety settings by default, including parental controls and age assurance solutions, to protect children and youth, and supports industry efforts to improve transparency regarding content provenance, digital literacy, and awareness; (2) reaffirms its commitment to prohibiting the generation, manipulation, and distribution of child sexual abuse material, non-consensual intimate imagery, deepfakes involving minors, online grooming, sexual exploitation, and extortion, requiring digital service providers to implement effective detection and removal measures, with particular attention to harms disproportionately affecting girls, young women, boys, and young men; (3) advocates sharing best practices, fostering research, and developing a scientific ecosystem to study the benefits and challenges of digital and AI technologies, emphasizing transparency, accountability, and the importance of data sharing, impartial evaluations, and common assessment standards to evaluate AI models\u2019 impact on minors\u2019 safety; and (4) endorses the G7 Common Set of Principles for a safer digital environment for minors, commits to regular meetings to assess progress, and highlights the importance of ongoing dialogue with partner countries to ensure the effective implementation of these measures by the end of the year.",
+    "headline": "G7 \u00c9vian summit issue joint statements including AI online safety commitments",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "G7 \u00c9vian summit issue joint statements including AI online safety commitments",
+    "jurisdictions": [
+      "G7"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "consilium.europa.eu/media/32fnosbz/leader-s-call-on-a-safer-digital-space-for-minors.pdf",
+      "elysee.fr/en/G7evian/2026/06/17/leaders-call-on-a-safer-digital-space-for-minors",
+      "elysee.fr/G7evian/2026/06/17/appel-des-chefs-detat-et-de-gouvernement-pour-un-espace-numerique-plus-sur-pour-les-mineurs",
+      "diplomatie.gouv.fr/en/presse-et-ressources/decouvrir-et-informer/actualites/appel-des-chefs-d-etat-et-de-gouvernement-pour-un-espace-numerique-plus-sur-pour-les-mineurs",
+      "pm.gc.ca/en/news/statements/2026/06/17/leaders-call-safer-digital-space-minors"
+    ],
+    "canonical_url": "https://www.consilium.europa.eu/media/32fnosbz/leader-s-call-on-a-safer-digital-space-for-minors.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "declaration",
+    "jurisdiction": "G7",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "International",
+    "source_format": "pdf",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

@@ -1,0 +1,57 @@
+{
+  "as_of_date": "2025-11-18",
+  "example_id": "find_primary_source-d0e75ad2509f",
+  "input": {
+    "article_url": null,
+    "headline": "East Asian democracy and Gulf federation agree several cooperation memorandums at leaders' summit covering artificial intelligence, aerospace and nuclear energy, including joint work on a US-backed giant AI data campus.",
+    "jurisdictions": [
+      "AE",
+      "KR"
+    ],
+    "published": "2025-11-18"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "South Korea and the United Arab Emirates (UAE) have signed seven memorandums of understanding to expand cooperation in strategic sectors (including AI, aerospace and nuclear energy) during a summit between President Lee Jae Myung and UAE President Mohammed bin Zayed Al Nahyan. Notably, South Korea has agreed to work with the UAE on the US-backed Stargate project to build a massive new AI data campus in the UAE. Earlier, in October 2025, Samsung Electronics and SK Hynix signed initial agreements to supply memory chips for OpenAI's Stargate data centers.",
+    "headline": "South Korea and UAE sign MOUs on AI",
+    "jurisdictions": [
+      "AE",
+      "KR"
+    ],
+    "published": "2025-11-18"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "South Korea and UAE sign MOUs on AI",
+    "jurisdictions": [
+      "AE",
+      "KR"
+    ],
+    "published": "2025-11-18"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "president.go.kr/newsroom/briefing/waMWlT1y",
+      "mohamedbinzayed.ae/en/latest-news-listing/2025/11/UAE-Korean-Presidents-witness-exchange-of-multiple-memoranda-of-understanding",
+      "msit.go.kr/eng/bbs/view.do?sCode=eng&mId=4&bbsSeqNo=42&nttSeqNo=1192",
+      "english.motir.go.kr/eng/article/EATCLdfa319ada/2416/view",
+      "korea.kr/multi/visualNewsView.do?newsId=148955014"
+    ],
+    "canonical_url": "https://www.president.go.kr/newsroom/briefing/waMWlT1y",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "agreement",
+    "jurisdiction": "AE",
+    "legal_domain": "trade",
+    "legal_domains": [
+      "trade"
+    ],
+    "question_form": "vague_alert",
+    "region": "Middle East",
+    "source_format": "html",
+    "source_language_guess": "ko",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

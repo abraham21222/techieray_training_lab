@@ -1,0 +1,59 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-3979ac328815",
+  "input": {
+    "article_url": null,
+    "headline": "Brazil bill proposes national AI governance system: new advisory council, data protection authority as residual AI regulator, expert committees, high-risk use criteria.",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Law would establish a regulatory framework for AI called the National System for the Development, Regulation, and Governance of AI (SIA), composed of a newly established Brazilian Council for Artificial Intelligence (CBIA), the Brazilian Data Protection Authority (ANPD), two newly established committees composed of experts and civil society representatives, and other related public bodies. The CBIA would be responsible for establishing guidelines and principles for AI in relation to economic development, digital sovereignty, and social inclusion, advising the President of the Republic on AI policy development, and coordinating with other authorities on sectoral issues. The ANPD would become the residual regulator and supervising authority for AI, with the power to issue binding rules, including regarding incident reporting and algorithmic impact assessments, request clarification on data used to train high-risk AI in the public sector, and publish a list of high-risk AI use cases. Further, the Law would require the ANPD and sectoral agencies to define new categories for high-risk AI, based on criteria such as impact on fundamental rights, vulnerable groups, risk of systemic cybersecurity harm, and impact on the development of children and adolescents. The statement of reasons notes that Congress is already examining Bill 2338/2023, and the Executive must be prepared to implement whichever regulatory model is adopted. The Law therefore organises Brazil\u2019s AI governance by assigning responsibilities to the CBIA, ANPD, expert and civil-society committees, and sectoral regulators to support coordinated oversight.",
+    "headline": "The Law establishing the National System for the Development, Regulation, and Governance of Artificial Intelligence (PL 6237/2025)",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "The Law establishing the National System for the Development, Regulation, and Governance of Artificial Intelligence (PL 6237/2025)",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3063060&filename=PL%206237/2025"
+    ],
+    "authoritative_hosts": [
+      "camara.leg.br",
+      "gov.br",
+      "planalto.gov.br",
+      "senado.leg.br"
+    ],
+    "authoritative_url_fragments": [
+      "camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3063060&filename=PL%206237/2025"
+    ],
+    "canonical_url": "https://camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=3063060&filename=PL%206237/2025",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "BR",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "pt",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

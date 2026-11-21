@@ -1,0 +1,53 @@
+{
+  "as_of_date": "2026-05-27",
+  "example_id": "find_primary_source-de001de02c59",
+  "input": {
+    "article_url": null,
+    "headline": "UK signals intelligence chief, giving inaugural annual lecture at wartime codebreaking site, urges businesses to boost cyber defences amid AI advances and Russia, China threats.",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-05-27"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Speaking at the first Annual Lecture at Bletchley Park, the Director of the UK's Government Communications Headquarters (GCHQ), Anne Keast-Butler, emphasised the historical significance of the site. The Director further emphasised the contributions of women in intelligence during World War II, particularly through the efforts of early leaders such as Alastair Denniston. The lecture addressed the current landscape of national security, highlighting the urgent need for collaboration among intelligence agencies, the importance of managing technological advancements, and the risks posed by adversaries such as Russia and China. Director Keast-Butler underscored the critical role of data and cybersecurity in safeguarding national interests, advocating immediate action from businesses to enhance cyber defenses. The speech also touched on the need for innovation in encryption and the significance of international partnerships, particularly within the Five Eyes alliance, to counter emerging threats. Ultimately, the Director called for collective vigilance and preparedness in the face of evolving challenges, reiterating the necessity of harnessing technology responsibly for national security.",
+    "headline": "UK cyberspying chief warns of peace and war amid AI advancements",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-05-27"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "UK cyberspying chief warns of peace and war amid AI advancements",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2026-05-27"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "gchq.gov.uk/news/director-gchq-warns-uk-at-moment-of-consequence-in-inaugural-annual-lecture",
+      "gchq.gov.uk/speech/gchq-annual-lecture-2026-as-delivered",
+      "gchq.gov.uk/sites/default/files/2026-10/Director-GCHQ-warns-UK-at-%E2%80%98moment-of-consequence%E2%80%99-in-inaugural-Annual-lecture.pdf"
+    ],
+    "canonical_url": "https://www.gchq.gov.uk/news/director-gchq-warns-uk-at-moment-of-consequence-in-inaugural-annual-lecture",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "declaration",
+    "jurisdiction": "GB",
+    "legal_domain": "cybersecurity",
+    "legal_domains": [
+      "cybersecurity",
+      "national_security"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

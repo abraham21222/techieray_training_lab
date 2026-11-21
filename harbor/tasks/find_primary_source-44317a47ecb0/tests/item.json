@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2024-12-21",
+  "example_id": "find_primary_source-44317a47ecb0",
+  "input": {
+    "article_url": null,
+    "headline": "New York state act requires agencies to list AI and automated decision tools, publish impact assessments, ensure human review, and bars automated job-loss decisions.",
+    "jurisdictions": [
+      "US-NY"
+    ],
+    "published": "2024-12-21"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "An act to establish legislative oversight of government automated decisions. It imposes several requirements on state agency use of AI and automated decision-making tools: requires state agencies to publish an online list of the tools they use; to conduct, submit, and publish an impact assessment for the lawful application and use of such tools; and to operationalize meaningful human review of tools used to allocate public assistance benefits or that may otherwise impact an individual's rights, safety, or welfare, with an initial impact assessment repeated at least every two years. It prohibits state agencies from using automated decision-making systems to make internal employment decisions that may result in discharge, displacement, loss of position, or impairment of collective bargaining agreements. No specific enforcement measures are stated.",
+    "headline": "The LOADinG Act: Legislative Oversight Of Automated Decision-Making in Government Act (S 7543B)",
+    "jurisdictions": [
+      "US-NY"
+    ],
+    "published": "2024-12-21"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "The LOADinG Act: Legislative Oversight Of Automated Decision-Making in Government Act (S 7543B)",
+    "jurisdictions": [
+      "US-NY"
+    ],
+    "published": "2024-12-21"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "nysenate.gov/legislation/bills/2023/S7543/amendment/B"
+    ],
+    "authoritative_hosts": [
+      "legislation.nysenate.gov",
+      "legistar.council.nyc.gov",
+      "nysenate.gov"
+    ],
+    "authoritative_url_fragments": [
+      "nysenate.gov/legislation/bills/2023/S7543/amendment/B"
+    ],
+    "canonical_url": "https://nysenate.gov/legislation/bills/2023/S7543/amendment/B",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "US-NY",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "employment",
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

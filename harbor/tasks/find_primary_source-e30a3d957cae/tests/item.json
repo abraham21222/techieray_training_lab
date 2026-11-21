@@ -1,0 +1,59 @@
+{
+  "as_of_date": "2025-12-09",
+  "example_id": "find_primary_source-e30a3d957cae",
+  "input": {
+    "article_url": null,
+    "headline": "EU member states adopt position on amending supercomputing joint undertaking rules to create AI gigafactories via public-private partnerships and add quantum pillar; Parliament next.",
+    "jurisdictions": [
+      "Europe"
+    ],
+    "published": "2025-12-09"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The European Council has adopted a position on the proposal for a regulation amending Regulation (EU) 2021/1173 as regards a EuroHPC initiative for start-ups to boost European leadership in trustworthy AI. The amendment sets the framework for the activities of the EuroHPC Joint Undertaking (EuroHPC JU) and updates the EuroHPC JU governance structure. It aims to establish AI gigafactories in Europe, which will be supported through public-private partnerships, and to establish a quantum pillar in the activities of the EuroHPC JU. The amendment also outlines the framework for establishing and operating such gigafactories, as well as rules for funding and procurement, and allows unused EU funds to be redirected to the project. Finally, it introduces safeguards for the participation of third countries. As a next step, the European Parliament is expected to give its opinion on 17 December 2025, after which the regulation will be up for final adoption.",
+    "headline": "EU Council approve EuroHPC initiative for start-ups to boost European leadership in trustworthy AI, proceeding to Parliament",
+    "jurisdictions": [
+      "Europe"
+    ],
+    "published": "2025-12-09"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "EU Council approve EuroHPC initiative for start-ups to boost European leadership in trustworthy AI, proceeding to Parliament",
+    "jurisdictions": [
+      "Europe"
+    ],
+    "published": "2025-12-09"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "consilium.europa.eu/en/press/press-releases/2025/12/09/ai-council-adopts-position-on-the-updated-regulation-to-create-ai-gigafactories",
+      "data.consilium.europa.eu/doc/document/ST-15977-2025-INIT/en/pdf"
+    ],
+    "authoritative_hosts": [
+      "data.consilium.europa.eu",
+      "eur-lex.europa.eu",
+      "technical-regulation-information-system.ec.europa.eu"
+    ],
+    "authoritative_url_fragments": [
+      "data.consilium.europa.eu/doc/document/ST-15977-2025-INIT/en/pdf"
+    ],
+    "canonical_url": "https://data.consilium.europa.eu/doc/document/ST-15977-2025-INIT/en/pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "Europe",
+    "legal_domain": "trade",
+    "legal_domains": [
+      "trade"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

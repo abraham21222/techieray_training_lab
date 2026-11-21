@@ -1,0 +1,50 @@
+{
+  "as_of_date": "2025-05-12",
+  "example_id": "find_primary_source-bce5eeb3104c",
+  "input": {
+    "article_url": null,
+    "headline": "UK upper chamber backs, by a large majority, amendment to data bill requiring AI firms to disclose copyrighted material used in models; bill returns to lower chamber.",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2025-05-12"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The House of Lords has voted 272 to 125 in favour of approving an amendment to the Data (Use and Access) Bill that would require AI companies to reveal which copyrighted material is used in their models, despite opposition in the House of Commons. The bill will now return to the House of Commons, and if the government removes the amendment, it will set the scene for another confrontation in the House of Lords next week.",
+    "headline": "Amendment to Data (Use and Access) Bill approved in House of Lords, now returning to House of Commons",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2025-05-12"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Amendment to Data (Use and Access) Bill approved in House of Lords, now returning to House of Commons",
+    "jurisdictions": [
+      "GB"
+    ],
+    "published": "2025-05-12"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "votes.parliament.uk/votes/lords/division/3307"
+    ],
+    "canonical_url": "https://votes.parliament.uk/votes/lords/division/3307",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "GB",
+    "legal_domain": "ip",
+    "legal_domains": [
+      "ip"
+    ],
+    "question_form": "vague_alert",
+    "region": "Europe",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

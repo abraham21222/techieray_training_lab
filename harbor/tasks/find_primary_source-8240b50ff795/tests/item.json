@@ -1,0 +1,60 @@
+{
+  "as_of_date": "2026-03-10",
+  "example_id": "find_primary_source-8240b50ff795",
+  "input": {
+    "article_url": null,
+    "headline": "Nigeria's central bank issues circular requiring banks and fintechs to adopt automated anti-money laundering systems with real-time monitoring, anomaly detection and AI-driven tools.",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-03-10"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Central Bank of Nigeria (CBN) has issued circular BSD/DIR/PUB/LAB/019/002, which mandates that all financial institutions, including banks and fintech companies, implement automated anti-money laundering (AML) systems capable of real-time transaction monitoring and anomaly detection. Among other items, the circular emphasizes the use of AI and machine learning in AML processes, in line with global best practices and international regulatory frameworks, including the recommendations of the Financial Action Task Force (FATF).",
+    "headline": "Nigeria Central Bank orders fintechs to comply with automated AML regulations covering AI",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-03-10"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Nigeria Central Bank orders fintechs to comply with automated AML regulations covering AI",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-03-10"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "cbn.gov.ng/Out/2026/CCD/CBN%20issues%20Baseline%20Standards%20for%20Automated%20Anti-Money%20Laundering%20Solution.pdf"
+    ],
+    "authoritative_hosts": [
+      "cbn.gov.ng",
+      "nass.gov.ng",
+      "ncc.gov.ng"
+    ],
+    "authoritative_url_fragments": [
+      "cbn.gov.ng/Out/2026/CCD/CBN%20issues%20Baseline%20Standards%20for%20Automated%20Anti-Money%20Laundering%20Solution.pdf"
+    ],
+    "canonical_url": "https://cbn.gov.ng/Out/2026/CCD/CBN%20issues%20Baseline%20Standards%20for%20Automated%20Anti-Money%20Laundering%20Solution.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "NG",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "cybersecurity",
+      "financial_services"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "pdf",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

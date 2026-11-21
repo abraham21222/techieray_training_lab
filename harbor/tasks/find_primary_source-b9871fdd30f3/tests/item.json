@@ -1,0 +1,51 @@
+{
+  "as_of_date": "2026-04-07",
+  "example_id": "find_primary_source-b9871fdd30f3",
+  "input": {
+    "article_url": null,
+    "headline": "T\u00fcrkiye's competition watchdog opens sector inquiry into AI value chain, examining data and computing access, entry barriers, lock-in and self-preferencing by digital platforms.",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2026-04-07"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "T\u00fcrkiye's Competition Authority (Rekabet Kurumu) has launched a comprehensive sector inquiry into the AI ecosystem to evaluate the transformative effects of AI on market dynamics and identify emerging competitive risks. The inquiry focuses on the AI value chain, which relies on a strategic structure from infrastructure to applications, emphasizing the importance of access to data, computing capacity, technical expertise, and funding for market positioning. The general-purpose nature of AI models, trained on large datasets, poses risks such as increased barriers to entry and user lock-in, necessitating an examination of access conditions and ecosystem relationships. Additionally, the integration of AI with existing digital platforms raises concerns regarding anti-competitive practices such as self-preferencing and exclusion, impacting future competition and innovation. Recent merger and acquisition assessments highlight the critical nature of AI in market control, prompting the inquiry to analyze the relationships within the value chain and the influence of data and computing power on competition. The findings will guide policy-making and intervention strategies to maintain competitive structures in T\u00fcrkiye's economy amid the evolving AI landscape.",
+    "headline": "Competition Authority launches strategic sector inquiry on AI",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2026-04-07"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Competition Authority launches strategic sector inquiry on AI",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": "2026-04-07"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "rekabet.gov.tr/en/Guncel/competition-authority-launched-sector-in-00e7fb1b8332f11193f70050568585c9",
+      "rekabet.gov.tr/tr/Guncel/yapay-zekaya-rekabet-kurumu-sektor-incel-d21eee058332f11193f70050568585c9"
+    ],
+    "canonical_url": "https://www.rekabet.gov.tr/en/Guncel/competition-authority-launched-sector-in-00e7fb1b8332f11193f70050568585c9",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "enforcement_action",
+    "jurisdiction": "TR",
+    "legal_domain": "competition",
+    "legal_domains": [
+      "competition"
+    ],
+    "question_form": "vague_alert",
+    "region": "Middle East",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

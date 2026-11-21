@@ -1,0 +1,50 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-df4888af5bd0",
+  "input": {
+    "article_url": null,
+    "headline": "Israel: two government ministries publish draft law requiring those spreading messages on large social networks to label automated, bot-distributed content.",
+    "jurisdictions": [
+      "IL"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "A draft law (published by the Ministry of Communications and the Ministry of Justice) which requires distributors of messages on large social networks to mark messages that are automatically distributed through technological applications, including \u201cbots\u201d.",
+    "headline": "Draft Bots Law (2022)",
+    "jurisdictions": [
+      "IL"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Draft Bots Law (2022)",
+    "jurisdictions": [
+      "IL"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "gov.il/en/departments/news/15062022_1"
+    ],
+    "canonical_url": "https://www.gov.il/en/departments/news/15062022_1",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "IL",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy"
+    ],
+    "question_form": "vague_alert",
+    "region": "Middle East",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

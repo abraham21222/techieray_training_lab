@@ -1,0 +1,50 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-609f322c21d9",
+  "input": {
+    "article_url": null,
+    "headline": "South Africa's government formally establishes a presidential advisory commission of academic, business and civil society leaders to advise on new digital-era technologies.",
+    "jurisdictions": [
+      "ZA"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The South African government established a commission (consisting of leaders from academia, business and civil society) to generate a comprehensive view of South Africa's current conditions as well as the prospects in the Fourth Industrial Revolution. The Commission acknowledged that AI is one of the high-technology industries in which the country is \"seriously underperforming\", but notes that it also has \"a unique opportunity to take stock of [its] vast potential in the form of human capacity, identify opportunities consistent with promoting a human centred, Africa-centric strategy for the future\".",
+    "headline": "Presidential Commission on Fourth Industrial Revolution (2019)",
+    "jurisdictions": [
+      "ZA"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Presidential Commission on Fourth Industrial Revolution (2019)",
+    "jurisdictions": [
+      "ZA"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "gov.za/sites/default/files/gcis_document/201904/42388gen209.pdf"
+    ],
+    "canonical_url": "https://www.gov.za/sites/default/files/gcis_document/201904/42388gen209.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "strategy",
+    "jurisdiction": "ZA",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "pdf",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

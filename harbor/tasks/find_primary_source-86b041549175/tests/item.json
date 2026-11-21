@@ -1,0 +1,57 @@
+{
+  "as_of_date": "2026-10-30",
+  "example_id": "find_primary_source-86b041549175",
+  "input": {
+    "article_url": null,
+    "headline": "EU and Canada adopt summit joint statement forming new partnership, prioritising mutual recognition of AI conformity assessments, interoperable digital rules, shared supercomputing and AI cybersecurity cooperation.",
+    "jurisdictions": [
+      "CA",
+      "Europe"
+    ],
+    "published": "2026-10-30"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The European Union and Canada have adopted a joint statement at the 21st EU-Canada Summit, held in Montr\u00e9al on 29\u201330 October 2026, establishing a Canada-EU Alliance for the Future. On AI, the parties commit to cooperate on AI security and safety, on the global governance of AI and sovereignty anchored in international law, and on free and trusted data flows and digital governance, with the stated aim of making AI models and systems and their respective digital regulatory frameworks interoperable. The statement provides for deeper joint work on advanced AI and high-performance computing capacity, including AI Factories, with attention to access for start-ups, small and medium-sized enterprises, researchers and public-sector users, and records Canada's participation in the European High Performance Computing Joint Undertaking (EuroHPC JU) to further integrate the two AI innovation ecosystems. The statement identifies mutual recognition of conformity assessment results for AI systems as one of three priority digital areas, alongside digital identity, credentials and trust services, and cybersecurity. The parties also commit to expand cybersecurity cooperation with particular attention to AI-enabled threats, including automated cyberattacks, while promoting the responsible use of AI for threat detection and incident response. The statement further sets the objective of easing market access for each other's cloud and AI service and infrastructure providers, subject to each side's regulatory framework, and of aligning work on the online protection of children.",
+    "headline": "EU and Canada launch Alliance for the Future with AI conformity recognition goal",
+    "jurisdictions": [
+      "CA",
+      "Europe"
+    ],
+    "published": "2026-10-30"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "EU and Canada launch Alliance for the Future with AI conformity recognition goal",
+    "jurisdictions": [
+      "CA",
+      "Europe"
+    ],
+    "published": "2026-10-30"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance",
+      "pm.gc.ca/fr/node/54494",
+      "ec.europa.eu/commission/presscorner/detail/en/statement_26_2313",
+      "pm.gc.ca/en/news/news-releases/2026/10/30/canada-and-european-union-announce-new-alliance-future-create-greater",
+      "eeas.europa.eu/node/468752_he"
+    ],
+    "canonical_url": "https://www.pm.gc.ca/en/news/statements/2026/10/30/joint-statement-canada-and-european-union-building-together-alliance",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "declaration",
+    "jurisdiction": "CA",
+    "legal_domain": "cybersecurity",
+    "legal_domains": [
+      "cybersecurity"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

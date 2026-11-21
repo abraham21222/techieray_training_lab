@@ -1,0 +1,31 @@
+{
+  "as_of_date": "2026-05-12",
+  "example_id": "find_primary_source-55488895e866",
+  "input": {
+    "article_url": null,
+    "headline": "Argentina's national executive publishes its annual legislative agenda, prioritizing comprehensive artificial intelligence legislation covering data, computing power, algorithms, cybersecurity and supply chains.",
+    "jurisdictions": [
+      "AR"
+    ],
+    "published": "2026-05-12"
+  },
+  "input_full": null,
+  "input_named": null,
+  "reference": {
+    "accepted_url_fragments": [],
+    "canonical_url": null,
+    "no_official_source": true
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "AR",
+    "legal_domain": "ip",
+    "legal_domains": [
+      "ip"
+    ],
+    "question_form": "counterfactual_alert",
+    "region": "Latin America & Caribbean",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

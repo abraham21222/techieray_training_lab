@@ -1,0 +1,59 @@
+{
+  "as_of_date": "2026-05-15",
+  "example_id": "find_primary_source-fc52044ee88e",
+  "input": {
+    "article_url": null,
+    "headline": "Nigeria's telecoms regulator brings internet conduct code into force, with grace period, setting child-protection, content takedown, data-breach notification and transparency duties for internet providers and platforms.",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-05-15"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Nigeria\u2019s Internet Code of Practice, a regulatory framework issued by the Nigerian Communications Commission (NCC), has entered into force with a grace period. The Code sets obligations for internet access providers and online/digital communication platforms to promote a safer, more responsible internet while balancing access, privacy, child protection, and lawful expression. It requires providers to: (1) publish clear terms and community rules; (2) protect minors and vulnerable users through parental controls and content safeguards; (3) block or report unlawful content when notified; (4) comply with data protection and cybersecurity requirements; (5) notify affected users and regulators of data breaches within 48 hours; (6) avoid discriminatory treatment of lawful content; (7) disclose traffic management practices transparently; and (8) submit periodic compliance reports to the NCC. The 2026 version also includes content moderation and quality-of-service rules, with limited proactive monitoring duties but obligations to assist law enforcement and follow takedown procedures where the Commission determines content is unlawful.",
+    "headline": "Internet Code of Practice enters into force, covering AI and emerging technologies",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-05-15"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Internet Code of Practice enters into force, covering AI and emerging technologies",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2026-05-15"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "ncc.gov.ng/media/5104/view"
+    ],
+    "authoritative_hosts": [
+      "nass.gov.ng",
+      "ncc.gov.ng"
+    ],
+    "authoritative_url_fragments": [
+      "ncc.gov.ng/media/5104/view"
+    ],
+    "canonical_url": "https://ncc.gov.ng/media/5104/view",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "NG",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety",
+      "telecoms"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

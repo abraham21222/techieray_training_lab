@@ -1,0 +1,53 @@
+{
+  "as_of_date": "2026-05-20",
+  "example_id": "find_primary_source-8bad6cd255b3",
+  "input": {
+    "article_url": null,
+    "headline": "Singapore updates national artificial intelligence strategy, aiming to help thousands of small firms adopt AI and boost key sectors through tech-company partnerships and new councils.",
+    "jurisdictions": [
+      "SG"
+    ],
+    "published": "2026-05-20"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Singapore has updated its National AI Strategy 2.0, with Minister for Digital Development and Information Josephine Teo announcing at the ATxSummit that the update aims to support 10,000 small and medium-sized enterprises over the next three years in effectively integrating AI into their operations. The initiative forms part of a broader effort to enhance AI adoption across key sectors, including connectivity, advanced manufacturing, healthcare, and finance, which collectively contribute over 40% of the country's GDP. The strategy includes partnerships with Google and OpenAI to address societal challenges, build an AI-ready workforce, and foster innovation, with OpenAI committing over S$300 million to bolster Singapore's AI ecosystem. The update also includes the establishment of the National AI Council and various AI Centres of Excellence to turn Singapore into a leading hub for AI innovation, alongside ongoing projects such as the development of a testbed for physical AI applications in public spaces.",
+    "headline": "Singapore updates National AI Strategy",
+    "jurisdictions": [
+      "SG"
+    ],
+    "published": "2026-05-20"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Singapore updates National AI Strategy",
+    "jurisdictions": [
+      "SG"
+    ],
+    "published": "2026-05-20"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "isomer-user-content.by.gov.sg/39/23a2fe74-a085-4e78-ae0d-481dbfefc3d1/NAIS%20Update.pdf",
+      "mddi.gov.sg/newsroom/update-to-singapore-s-national-ai-strategy--refreshed-priorities-to-harness-ai-for-the-public-good-factsheet",
+      "mddi.gov.sg/newsroom/opening-address-by-minister-josephine-teo-at-atxsummit-2026"
+    ],
+    "canonical_url": "https://isomer-user-content.by.gov.sg/39/23a2fe74-a085-4e78-ae0d-481dbfefc3d1/NAIS%20Update.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "strategy",
+    "jurisdiction": "SG",
+    "legal_domain": "health",
+    "legal_domains": [
+      "health",
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "pdf",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

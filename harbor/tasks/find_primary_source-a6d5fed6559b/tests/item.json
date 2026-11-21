@@ -1,0 +1,54 @@
+{
+  "as_of_date": "2025-04-07",
+  "example_id": "find_primary_source-a6d5fed6559b",
+  "input": {
+    "article_url": null,
+    "headline": "South Africa's digital technology minister urges G20 nations to build a shared AI regulatory framework prioritising low-resource languages, data-sharing, small businesses and bias mitigation.",
+    "jurisdictions": [
+      "G20",
+      "ZA"
+    ],
+    "published": "2025-04-07"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Speaking at the G20 Digital Economy Working Group and AI Task Force, South African Communications and Digital Technologies Minister Solly Malatsi called on Group of 20 (G20) countries to develop a framework of rules that member states can use to regulate AI. The Minister called in particular for a framework that prioritises the development of AI for low-resource languages, and for countries to collaborate in sharing data and tools to close the gap in linguistic diversity in digital technologies. Among other things, Minister Malatsi emphasized that South Africa seeks to advance the Global South\u2019s agenda by addressing connectivity gaps, supporting micro, small and medium-sized enterprises (MSMEs), and ensuring AI respects cultural diversity while mitigating biases.",
+    "headline": "South Africa Digital Tech Minister urges G20 countries to regulate AI",
+    "jurisdictions": [
+      "G20",
+      "ZA"
+    ],
+    "published": "2025-04-07"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "South Africa Digital Tech Minister urges G20 countries to regulate AI",
+    "jurisdictions": [
+      "G20",
+      "ZA"
+    ],
+    "published": "2025-04-07"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "gov.za/news/speeches/minister-solly-malatsi-second-meeting-digital-economy-working-group-and-task-force-ai",
+      "sanews.gov.za/south-africa/sa-advocates-linguistic-equity-ai-g20"
+    ],
+    "canonical_url": "https://www.gov.za/news/speeches/minister-solly-malatsi-second-meeting-digital-economy-working-group-and-task-force-ai",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "strategy",
+    "jurisdiction": "G20",
+    "legal_domain": "human_rights",
+    "legal_domains": [
+      "human_rights"
+    ],
+    "question_form": "vague_alert",
+    "region": "International",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

@@ -1,0 +1,60 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-87e420c1be48",
+  "input": {
+    "article_url": null,
+    "headline": "Brazil: Lawmakers propose bill banning use of children's images in AI systems without parental consent; penalties include fines, processing suspension, possible ban on handling children's data.",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "A bill to prohibit use of children's images in AI systems without explicit consent from parents or legal guardians. Penalties for non-compliance, include fines, suspension of data processing activities, and a potential ban on processing children's data.",
+    "headline": "Bill 2807/2024",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Bill 2807/2024",
+    "jurisdictions": [
+      "BR"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2448043"
+    ],
+    "authoritative_hosts": [
+      "camara.leg.br",
+      "gov.br",
+      "planalto.gov.br",
+      "senado.leg.br"
+    ],
+    "authoritative_url_fragments": [
+      "camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2448043"
+    ],
+    "canonical_url": "https://camara.leg.br/proposicoesWeb/fichadetramitacao?idProposicao=2448043",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "BR",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "pt",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

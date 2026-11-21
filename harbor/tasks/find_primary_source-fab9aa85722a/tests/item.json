@@ -1,0 +1,59 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-fab9aa85722a",
+  "input": {
+    "article_url": null,
+    "headline": "Turkey: Bill introduced in parliament to set AI rules, including liability for crimes committed through AI, rapid deepfake takedowns, emergency blocking powers and mandatory labelling of AI content.",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "A bill establishing an AI legal framework in T\u00fcrkiye has been introduced to the Grand National Assembly. The proposed legislation would clarify responsibilities for both users and developers of AI, defining AI systems by amending Law No. 5651 and regulating liability for crimes committed through AI by modifying Penal Code No. 5237. Other key features include: (1) mandating removal of AI-generated content violating personality rights, threatening public safety, or using deepfake technology within six hours via modifications to Law No. 5651; (2) granting the Information Technologies and Communication Authority (BTK) emergency access blocking power for AI content threatening public order or election security, with fines up to TRY 10 million (modifies Law No. 5809); (3) amending the Cybersecurity Law (modifying Law No. 7545) to require AI service providers to implement content verification mechanisms and algorithmic controls reducing hallucination risks, subject to possible penalties of TRY 5 million for failure to do so; and (4) mandating clear labelling of AI-generated content, (modifies Law No. 5651), with fines between TRY 500'000 and 5'000'000 for violations, with the possibility of content provider blocking for systematic and intentional violations.",
+    "headline": "Bill no. 2/3358",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Bill no. 2/3358",
+    "jurisdictions": [
+      "TR"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y4/T2/WebOnergeMetni/5b8d2dc6-9dee-41e8-98c6-ee5b28ca9608.pdf"
+    ],
+    "authoritative_hosts": [
+      "mevzuat.gov.tr",
+      "resmigazete.gov.tr",
+      "tbmm.gov.tr"
+    ],
+    "authoritative_url_fragments": [
+      "cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y4/T2/WebOnergeMetni/5b8d2dc6-9dee-41e8-98c6-ee5b28ca9608.pdf"
+    ],
+    "canonical_url": "https://cdn.tbmm.gov.tr/KKBSPublicFile/D28/Y4/T2/WebOnergeMetni/5b8d2dc6-9dee-41e8-98c6-ee5b28ca9608.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "bill",
+    "jurisdiction": "TR",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "Middle East",
+    "source_format": "pdf",
+    "source_language_guess": "tr",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

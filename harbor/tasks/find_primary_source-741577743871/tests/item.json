@@ -1,0 +1,57 @@
+{
+  "as_of_date": "2024-03-12",
+  "example_id": "find_primary_source-741577743871",
+  "input": {
+    "article_url": null,
+    "headline": "US state legislation extends ban on distributing intimate images to computer-generated or AI-altered depictions of real people, applying existing criminal penalties.",
+    "jurisdictions": [
+      "US-IN"
+    ],
+    "published": "2024-03-12"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "A bill to address the creation or disclosure of synthetic intimate images. It extends prohibitions on the distribution of intimate images to include computer-generated images, including images of an individual created or modified by means of a computer software program, artificial intelligence, application, or other design-editing tools. Existing criminal penalties apply.",
+    "headline": "Amendment of Indiana Law Governing Distribution of Intimate Images (HB 1047)",
+    "jurisdictions": [
+      "US-IN"
+    ],
+    "published": "2024-03-12"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Amendment of Indiana Law Governing Distribution of Intimate Images (HB 1047)",
+    "jurisdictions": [
+      "US-IN"
+    ],
+    "published": "2024-03-12"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "iga.in.gov/legislative/2024/bills/house/1047/details"
+    ],
+    "authoritative_hosts": [
+      "iga.in.gov"
+    ],
+    "authoritative_url_fragments": [
+      "iga.in.gov/legislative/2024/bills/house/1047/details"
+    ],
+    "canonical_url": "https://iga.in.gov/legislative/2024/bills/house/1047/details",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "US-IN",
+    "legal_domain": "online_safety",
+    "legal_domains": [
+      "online_safety",
+      "human_rights"
+    ],
+    "question_form": "vague_alert",
+    "region": "North America",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

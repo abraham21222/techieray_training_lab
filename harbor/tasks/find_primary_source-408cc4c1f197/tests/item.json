@@ -1,0 +1,33 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-408cc4c1f197",
+  "input": {
+    "article_url": null,
+    "headline": "South Africa's national government adopts a comprehensive digital code creating new regulators and covering data processing, e-signatures, online advertising, consumer protection, electronic evidence and start-up incentives.",
+    "jurisdictions": [
+      "ZA"
+    ],
+    "published": null
+  },
+  "input_full": null,
+  "input_named": null,
+  "reference": {
+    "accepted_url_fragments": [],
+    "canonical_url": null,
+    "no_official_source": true
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "ZA",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "consumer",
+      "financial_services"
+    ],
+    "question_form": "counterfactual_alert",
+    "region": "Africa",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

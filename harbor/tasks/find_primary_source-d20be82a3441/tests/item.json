@@ -1,0 +1,31 @@
+{
+  "as_of_date": "2024-05-16",
+  "example_id": "find_primary_source-d20be82a3441",
+  "input": {
+    "article_url": null,
+    "headline": "Senior Russian and Chinese envoys meet in Geneva to open their first intergovernmental dialogue on AI regulation, agreed by both presidents; outcomes not yet disclosed.",
+    "jurisdictions": [
+      "RU"
+    ],
+    "published": "2024-05-16"
+  },
+  "input_full": null,
+  "input_named": null,
+  "reference": {
+    "accepted_url_fragments": [],
+    "canonical_url": null,
+    "no_official_source": true
+  },
+  "strata": {
+    "instrument_type": "declaration",
+    "jurisdiction": "RU",
+    "legal_domain": "national_security",
+    "legal_domains": [
+      "national_security"
+    ],
+    "question_form": "counterfactual_alert",
+    "region": "Europe",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}

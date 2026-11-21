@@ -1,0 +1,12 @@
+FROM python:3.12-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl ca-certificates tmux \
+    && rm -rf /var/lib/apt/lists/* \
+    && pip install --no-cache-dir beautifulsoup4 pypdf ddgs
+
+COPY tools/websearch /usr/local/bin/websearch
+COPY tools/webfetch /usr/local/bin/webfetch
+RUN chmod +x /usr/local/bin/websearch /usr/local/bin/webfetch
+
+WORKDIR /workspace

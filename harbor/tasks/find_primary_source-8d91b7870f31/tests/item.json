@@ -1,0 +1,60 @@
+{
+  "as_of_date": null,
+  "example_id": "find_primary_source-8d91b7870f31",
+  "input": {
+    "article_url": null,
+    "headline": "El Salvador AI promotion law requires high-risk impact assessments, transparency in critical sectors, a developer registry for sandbox protections and a government AI research lab.",
+    "jurisdictions": [
+      "SV"
+    ],
+    "published": null
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "Key aspects of the legislation include mandatory impact assessments for high-risk AI systems, requirements for data privacy compliance, and transparency obligations for AI algorithms used in critical sectors like healthcare, finance, and public administration. The law also introduces penalties for companies that fail to comply with these standards. Other features include: (1) Article 19 of the law which provides safeguards such as sandbox protections and shields against third-party mischief; (2) establishment of an AI Registry through which AI developers must register to fully enjoy all the protections under Article 19; and (3) establishment of an AI Lab through which the government can promote research, development, and application of AI within government services and institutions (e.g. \"helping to improve traffic flow, monitoring water quality and optimising geothermal resources\").",
+    "headline": "Law for the Promotion of Artificial Intelligence and Technologies (2025)",
+    "jurisdictions": [
+      "SV"
+    ],
+    "published": null
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Law for the Promotion of Artificial Intelligence and Technologies (2025)",
+    "jurisdictions": [
+      "SV"
+    ],
+    "published": null
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "asamblea.gob.sv/leyes-y-decretos/view/6137",
+      "asamblea.gob.sv/sites/default/files/documents/decretos/277EFC88-1C8D-4ACD-BE44-9DAFD64C6797.pdf"
+    ],
+    "authoritative_hosts": [
+      "asamblea.gob.sv"
+    ],
+    "authoritative_url_fragments": [
+      "asamblea.gob.sv/leyes-y-decretos/view/6137",
+      "asamblea.gob.sv/sites/default/files/documents/decretos/277EFC88-1C8D-4ACD-BE44-9DAFD64C6797.pdf"
+    ],
+    "canonical_url": "https://www.asamblea.gob.sv/leyes-y-decretos/view/6137",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "SV",
+    "legal_domain": "privacy",
+    "legal_domains": [
+      "privacy",
+      "financial_services",
+      "health"
+    ],
+    "question_form": "vague_alert",
+    "region": "Latin America & Caribbean",
+    "source_format": "html",
+    "source_language_guess": "es",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

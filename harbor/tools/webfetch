@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Neutral web fetch CLI for containerized Harbor benchmarks.
+
+Fetches HTML or PDF documents (using browser-TLS HTTP via primp with stdlib
+fallback so government portals behind Akamai/Cloudflare load reliably), follows
+redirects, extracts clean readable text (HTML + PDF), and enforces the
+techieray.com domain blocklist at the tool layer.
+"""
+from __future__ import annotations
+
+import argparse
+import io
+import json
+import pathlib
+import re
+import ssl
+import sys
+import urllib.error
+import urllib.request
+
+BLOCKED_RE = re.compile(r"(?<![a-z0-9-])(?:[a-z0-9-]+\.)*techieray\.com(?![a-z0-9-])", re.I)
+UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+MAX_BYTES = 5 * 1024 * 1024  # 5 MB cap
+
+
+def _mark_blocked(reason: str) -> None:
+    try:
+        p = pathlib.Path("/workspace/.blocked_domain_seen")
+        if p.parent.exists():
+            p.write_text(reason + "\n")
+    except Exception:
+        pass
+
+
+def _is_blocked(url: str) -> bool:
+    return bool(BLOCKED_RE.search(url or ""))
+
+
+def _extract_html(raw_bytes: bytes) -> tuple[str, str]:
+    from bs4 import BeautifulSoup  # type: ignore
+
+    soup = BeautifulSoup(raw_bytes, "html.parser")
+    title = soup.title.get_text(" ", strip=True) if soup.title else ""
+    for tag in soup(["script", "style", "noscript", "svg"]):
+        tag.decompose()
+    text = soup.get_text("\n", strip=True)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return title, text
+
+
+def _extract_pdf(raw_bytes: bytes, max_pages: int = 15) -> tuple[str, str]:
+    from pypdf import PdfReader  # type: ignore
+
+    reader = PdfReader(io.BytesIO(raw_bytes))
+    title = ""
+    try:
+        if reader.metadata and reader.metadata.title:
+            title = str(reader.metadata.title).strip()
+    except Exception:
+        pass
+    pages = []
+    for i, page in enumerate(reader.pages[:max_pages]):
+        try:
+            t = page.extract_text() or ""
+            if t.strip():
+                pages.append(f"--- Page {i + 1} ---\n{t.strip()}")
+        except Exception:
+            continue
+    return title, "\n\n".join(pages)
+
+
+def _fetch_primp(url: str, *, headers_only: bool, timeout: int, insecure: bool) -> tuple[str, int, str, bytes]:
+    import primp  # type: ignore
+
+    client = primp.Client(
+        impersonate="random",
+        timeout=timeout,
+        follow_redirects=True,
+        verify=not insecure,
+    )
+    resp = client.head(url) if headers_only else client.get(url)
+    final_url = str(resp.url)
+    status = int(resp.status_code)
+    hdrs = {k.lower(): v for k, v in (resp.headers or {}).items()}
+    ctype = str(hdrs.get("content-type", ""))
+    raw = b"" if headers_only else bytes(resp.content[:MAX_BYTES])
+    return final_url, status, ctype, raw
+
+
+def _fetch_urllib(url: str, *, headers_only: bool, timeout: int, insecure: bool) -> tuple[str, int, str, bytes]:
+    ctx = ssl._create_unverified_context() if insecure else ssl.create_default_context()
+    method = "HEAD" if headers_only else "GET"
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml,application/pdf,application/json;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+        method=method,
+    )
+    with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+        final_url = resp.geturl()
+        status = getattr(resp, "status", 200)
+        ctype = resp.headers.get("Content-Type", "")
+        raw = b"" if headers_only else resp.read(MAX_BYTES)
+        return final_url, status, ctype, raw
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Neutral web fetch CLI (HTML + PDF) for Harbor tasks.")
+    ap.add_argument("url", help="HTTP/HTTPS URL to fetch")
+    ap.add_argument("--max-chars", type=int, default=12000, help="Max extracted characters (default: 12000)")
+    ap.add_argument("--timeout", type=int, default=20, help="Request timeout in seconds (default: 20)")
+    ap.add_argument("--headers-only", action="store_true", help="HEAD request only (check live status/redirect)")
+    ap.add_argument("--insecure", action="store_true", help="Allow legacy/self-signed government TLS certs")
+    args = ap.parse_args()
+
+    url = args.url.strip()
+    if not url.startswith(("http://", "https://")):
+        print(json.dumps({"error": "invalid_url", "url": url}), file=sys.stderr)
+        return 1
+    if _is_blocked(url):
+        _mark_blocked(f"webfetch url blocked: {url}")
+        print(json.dumps({"error": "blocked_domain", "url": url}), file=sys.stderr)
+        return 2
+
+    try:
+        try:
+            final_url, status, ctype, raw = _fetch_primp(
+                url, headers_only=args.headers_only, timeout=args.timeout, insecure=args.insecure
+            )
+        except Exception:
+            final_url, status, ctype, raw = _fetch_urllib(
+                url, headers_only=args.headers_only, timeout=args.timeout, insecure=args.insecure
+            )
+    except urllib.error.HTTPError as exc:
+        print(json.dumps({
+            "url": url,
+            "final_url": exc.geturl(),
+            "status": exc.code,
+            "error": str(exc),
+        }, ensure_ascii=False, indent=2))
+        return 1
+    except Exception as exc:
+        print(json.dumps({"url": url, "error": str(exc)}, ensure_ascii=False, indent=2))
+        return 1
+
+    if _is_blocked(final_url):
+        _mark_blocked(f"webfetch redirect blocked: {final_url}")
+        print(json.dumps({"error": "blocked_domain_redirect", "url": url}), file=sys.stderr)
+        return 2
+
+    if args.headers_only:
+        print(json.dumps({
+            "url": url,
+            "final_url": final_url,
+            "status": status,
+            "content_type": ctype,
+        }, ensure_ascii=False, indent=2))
+        return 0
+
+    title = ""
+    text = ""
+    low_ct = ctype.lower()
+    if raw[:4] == b"%PDF":
+        try:
+            title, text = _extract_pdf(raw)
+        except Exception as exc:
+            text = f"[PDF extraction error: {exc}]"
+    elif "html" in low_ct or b"<html" in raw[:512].lower() or b"<!doctype html" in raw[:512].lower():
+        try:
+            title, text = _extract_html(raw)
+        except Exception:
+            text = raw.decode("utf-8", errors="replace")
+    else:
+        text = raw.decode("utf-8", errors="replace")
+
+    truncated = len(text) > args.max_chars
+    if truncated:
+        text = text[: args.max_chars] + "\n...[truncated]"
+
+    print(json.dumps({
+        "url": url,
+        "final_url": final_url,
+        "status": status,
+        "content_type": ctype,
+        "title": title,
+        "truncated": truncated,
+        "text": text,
+    }, ensure_ascii=False, indent=2))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

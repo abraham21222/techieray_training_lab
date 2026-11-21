@@ -1,0 +1,61 @@
+{
+  "as_of_date": "2025-09-09",
+  "example_id": "find_primary_source-cc7d26fa05c6",
+  "input": {
+    "article_url": null,
+    "headline": "Australia's online safety regulator registers industry code requiring certain internet services, including generative AI tools, to curb harmful content and protect children through age and content controls.",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2025-09-09"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The eSafety Commissioner has registered the Designated Internet Services Online Safety Code (Class 1C and Class 2 Material) under the Online Safety Act 2021. The Code outlines a risk-based framework for designated internet services (DIS) to manage harmful content, with a focus on protecting children. Among other things, it includes provisions for emerging technologies, including generative AI services, which must prevent restricted content generation and implement age or content controls.",
+    "headline": "Designated Internet Services Online Safety Code (Class 1C and Class 2 Material) registered, covering AI",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2025-09-09"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "Designated Internet Services Online Safety Code (Class 1C and Class 2 Material) registered, covering AI",
+    "jurisdictions": [
+      "AU"
+    ],
+    "published": "2025-09-09"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "esafety.gov.au/sites/default/files/2025-09/Schedule-6-Designated-Internet-Services-Online-Safety-Code-Class-1C-and-Class-2-Material.pdf",
+      "esafety.gov.au/newsroom/media-releases/new-world-first-standards-set-new-rules-for-how-tech-giants-must-tackle-worst-of-the-worst-online-content"
+    ],
+    "authoritative_hosts": [
+      "acma.gov.au",
+      "aph.gov.au",
+      "esafety.gov.au",
+      "legislation.gov.au",
+      "protectivesecurity.gov.au"
+    ],
+    "authoritative_url_fragments": [
+      "esafety.gov.au/sites/default/files/2025-09/Schedule-6-Designated-Internet-Services-Online-Safety-Code-Class-1C-and-Class-2-Material.pdf"
+    ],
+    "canonical_url": "https://esafety.gov.au/sites/default/files/2025-09/Schedule-6-Designated-Internet-Services-Online-Safety-Code-Class-1C-and-Class-2-Material.pdf",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "binding_law",
+    "jurisdiction": "AU",
+    "legal_domain": "online_safety",
+    "legal_domains": [
+      "online_safety"
+    ],
+    "question_form": "vague_alert",
+    "region": "Asia-Pacific",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": true
+  },
+  "task": "find_primary_source"
+}

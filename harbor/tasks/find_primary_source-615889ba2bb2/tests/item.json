@@ -1,0 +1,50 @@
+{
+  "as_of_date": "2024-10-12",
+  "example_id": "find_primary_source-615889ba2bb2",
+  "input": {
+    "article_url": null,
+    "headline": "Nigeria's IT agency chief, speaking at a fintech event, urges African participation in shaping worldwide artificial intelligence governance and context-sensitive rules for the continent.",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2024-10-12"
+  },
+  "input_full": {
+    "article_url": null,
+    "excerpt": "The Director General of the National Information Technology Development Agency (NITDA), Kashifu Inuwa, delivered a keynote speech at the Nigeria Fintech Week, emphasising (1) the importance of Africa\u2019s engagement in global AI governance to ensure that the technology benefits all of humanity, not just the advanced nations; and (2) the need for a regulatory framework that acknowledges the diverse cultural, economic, and social contexts of Africa. The Director General noted that challenges and opportunities in cities like Lagos, Nairobi, and Johannesburg differ significantly from those in Silicon Valley or Schengen.",
+    "headline": "NITDA calls for Africa\u2019s active role in global AI regulation",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2024-10-12"
+  },
+  "input_named": {
+    "article_url": null,
+    "headline": "NITDA calls for Africa\u2019s active role in global AI regulation",
+    "jurisdictions": [
+      "NG"
+    ],
+    "published": "2024-10-12"
+  },
+  "reference": {
+    "accepted_url_fragments": [
+      "von.gov.ng/nitda-calls-for-africas-active-role-in-global-ai-regulation"
+    ],
+    "canonical_url": "https://von.gov.ng/nitda-calls-for-africas-active-role-in-global-ai-regulation/",
+    "no_official_source": false
+  },
+  "strata": {
+    "instrument_type": "guidance",
+    "jurisdiction": "NG",
+    "legal_domain": "public_sector",
+    "legal_domains": [
+      "public_sector"
+    ],
+    "question_form": "vague_alert",
+    "region": "Africa",
+    "source_format": "html",
+    "source_language_guess": "en",
+    "strict": false
+  },
+  "task": "find_primary_source"
+}
